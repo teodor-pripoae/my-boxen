@@ -4,9 +4,19 @@ GITHUBTARBALL
     boxen (1.0.2)
 
 GITHUBTARBALL
+  remote: boxen/puppet-chrome
+  specs:
+    chrome (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-dnsmasq
   specs:
     dnsmasq (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-dropbox
+  specs:
+    dropbox (1.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-gcc
@@ -29,6 +39,16 @@ GITHUBTARBALL
     hub (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-istatmenus3
+  specs:
+    istatmenus3 (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-iterm2
+  specs:
+    iterm2 (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-nginx
   specs:
     nginx (1.0.0)
@@ -42,6 +62,16 @@ GITHUBTARBALL
   remote: boxen/puppet-nvm
   specs:
     nvm (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-onepassword
+  specs:
+    onepassword (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-osx
+  specs:
+    osx (1.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-ruby
@@ -59,21 +89,33 @@ GITHUBTARBALL
     inifile (0.9.0)
 
 GITHUBTARBALL
+  remote: grahamgilbert/puppet-chocolat
+  specs:
+    chocolat (1.0.0)
+
+GITHUBTARBALL
   remote: puppetlabs/puppetlabs-stdlib
   specs:
     stdlib (3.0.0)
 
 DEPENDENCIES
   boxen (= 1.0.2)
+  chocolat (= 1.0.0)
+  chrome (= 1.0.0)
   dnsmasq (= 1.0.0)
+  dropbox (= 1.0.0)
   gcc (= 1.0.0)
   git (= 1.0.0)
   homebrew (= 1.0.0)
   hub (= 1.0.0)
   inifile (= 0.9.0)
+  istatmenus3 (= 1.0.0)
+  iterm2 (= 1.0.0)
   nginx (= 1.0.0)
   nodejs (= 1.0.0)
   nvm (= 1.0.0)
+  onepassword (= 1.0.0)
+  osx (= 1.0.0)
   ruby (= 1.0.0)
   stdlib (= 3.0.0)
   sudo (= 1.0.0)
