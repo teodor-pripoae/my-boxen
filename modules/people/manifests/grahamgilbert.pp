@@ -1,6 +1,6 @@
 class people::grahamgilbert {
 include people::grahamgilbert::applications
-notify { 'class people::grahamgilbert declared': }
+include git
 	# Changes the default shell to the zsh version we get from Homebrew
 	# Uses the osx_chsh type out of boxen/puppet-osx
   osx_chsh { $::luser:
@@ -24,4 +24,8 @@ notify { 'class people::grahamgilbert declared': }
     target  => "/Users/${::boxen_user}/.oh-my-zsh/grahams-zshrc",
     require => Repository['oh-my-zsh']
   }
+
+git::config::global { 'user.email':
+  value  => 'graham@grahamgilbert.com'
+}
 }
