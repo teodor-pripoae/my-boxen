@@ -19,7 +19,7 @@ class people::grahamgilbert::dock (
 		label	=> "iTerm",
 		action => "add",
 		position => 2,
-		require => Class['iterm2:dev'],
+		require => Class['iterm2::dev'],
 	}
 	
 	dockutil::item { 'Chocolat':
