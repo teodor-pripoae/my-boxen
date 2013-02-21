@@ -2,7 +2,7 @@ class people::grahamgilbert::config (
 	$my_homedir   = $people::grahamgilbert::params::my_homedir,
   	$my_sourcedir = $people::grahamgilbert::params::my_sourcedir,
   	$my_username  = $people::grahamgilbert::params::my_username
-	){
+	){	
 		# Changes the default shell to the zsh version we get from Homebrew
 		# Uses the osx_chsh type out of boxen/puppet-osx
 		osx_chsh { $::luser:
@@ -16,8 +16,10 @@ class people::grahamgilbert::config (
 			require => Package['zsh'],
 		}
 		
-		file {"${my_sourcedir}/Mine":
-			ensure => directory,
+		if !defined(File["${my_sourcedir}/Mine"]){
+			file {"${my_sourcedir}/Mine":
+				ensure => directory,
+			}
 		}
 		
 		repository { 'Chocolat Truffles':
@@ -51,18 +53,34 @@ class people::grahamgilbert::config (
 			value  => 'graham@grahamgilbert.com'
 		}
 		
-		boxen::osx_defaults {
-			'Chocolat Theme':
+		Boxen::Osx_defaults {
+		  user => $::luser,
+		}
+		
+		boxen::osx_defaults { 'Chocolat Theme':
 			  ensure => present,
 			  domain => 'com.chocolatapp.Chocolat',
 			  key    => 'CHActiveTheme',
 			  value  => 'Owl',
-			  user   => $::boxen_user;
-			'Chocolat Font Size':
+		}
+		
+		boxen::osx_defaults { 'Chocolat Font Size':
 			  ensure => present,
 			  domain => 'com.chocolatapp.Chocolat',
 			  key    => 'CHDefaultFontSize',
 			  value  => 15,
-			  user   => $::boxen_user;
-		  }
+		 }
+		 
+		 boxen::osx_defaults { 'Finder Status Bar':
+			 ensure	=> 	present,
+			 domain	=>	'com.apple.finder',
+			 key	=>	'ShowStatusBar',
+			 value	=>	'YES',
+		}
+		
+		boxen::osx_defaults { 'Disable the "Are you sure you want to open this application?" dialog':
+			key    => 'LSQuarantine',
+		  	domain => 'com.apple.LaunchServices',
+		  	value  => 'true',
+		}
 }
