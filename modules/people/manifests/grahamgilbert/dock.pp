@@ -3,6 +3,7 @@ class people::grahamgilbert::dock (
   	$my_sourcedir = $people::grahamgilbert::params::my_sourcedir,
   	$my_username  = $people::grahamgilbert::params::my_username
 	){
+	
 	include dockutil
 	
 	dockutil::item { 'add chrome':

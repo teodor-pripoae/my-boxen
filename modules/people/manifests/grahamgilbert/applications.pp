@@ -13,11 +13,10 @@ class people::grahamgilbert::applications {
 	include virtualbox
 	include colloquy
 	include caffeine
+	include alfred
 
 	package{ 'zsh': }
-	#package{ 'rbenv': }
 	package{ 'htop-osx': }
-	#package{ 'nano': }
 
 	package { 'Github for Mac':
     	source   => 'https://github-central.s3.amazonaws.com/mac%2FGitHub%20for%20Mac%20111.zip',
@@ -37,5 +36,5 @@ class people::grahamgilbert::applications {
   	package { 'Bartender':
   		source => 'http://www.macbartender.com/Demo/Bartender.zip',
   		provider => compressed_app,
-  		}
+  	}
 }
