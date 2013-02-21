@@ -8,7 +8,7 @@ class people::grahamgilbert::applications {
 	include chrome
 	include onepassword
 	include dropbox
-	include iterm2::stable
+	include iterm2::dev
 	include chocolat
 	include virtualbox
 	include colloquy

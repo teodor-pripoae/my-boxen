@@ -11,6 +11,7 @@ class people::grahamgilbert::dock (
 		label	=> "Google Chrome",
 		position => 1,
 		action => "add",
+		require => Class['chrome'],
 	}
 	
 	dockutil::item { 'Add iTerm':
@@ -18,6 +19,7 @@ class people::grahamgilbert::dock (
 		label	=> "iTerm",
 		action => "add",
 		position => 2,
+		require => Class['iterm2:dev'],
 	}
 	
 	dockutil::item { 'Chocolat':
@@ -25,6 +27,7 @@ class people::grahamgilbert::dock (
 		label	=> "Chocolat",
 		position => 3,
 		action => "add",
+		require => Class['chocolat'],
 	}
 	
 	dockutil::item { 'Colloquy':
@@ -32,6 +35,7 @@ class people::grahamgilbert::dock (
 		label	=> "Colloquy",
 		position => 4,
 		action => "add",
+		require => Class['colloquy'],
 	}
 	
 	dockutil::item { 'VMWare Fusion':
@@ -39,6 +43,7 @@ class people::grahamgilbert::dock (
 		label	=> "VMWare Fusion",
 		position => 5,
 		action => "add",
+		
 	}
 	
 	dockutil::item { 'GitHub':
@@ -46,6 +51,7 @@ class people::grahamgilbert::dock (
 		label	=> "GitHub",
 		position => 6,
 		action => "add",
+		require => Package['Github for Mac'],
 	}
 	
 	## Remove the default crap	
