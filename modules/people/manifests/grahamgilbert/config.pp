@@ -27,7 +27,7 @@ class people::grahamgilbert::config (
 			path   => "${my_sourcedir}/Mine/chocolat-truffles",
 			require => [
 			             File["${my_sourcedir}/Mine"],
-			             File"/Users/${::luser}/Library/Application Support/Chocolat"],
+			             File["/Users/${::luser}/Library/Application Support/Chocolat"],
 			             ]
 		}
 		
