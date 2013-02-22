@@ -45,6 +45,6 @@ class people::grahamgilbert::applications {
   	
   	package { 'Transmit':
   	 source      => 'http://www.panic.com/transmit/d/Transmit%204.3.2.zip',
-  	 provider    => compress_app,
+  	 provider    => compressed_app,
     }
 }
