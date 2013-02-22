@@ -111,4 +111,11 @@ class people::grahamgilbert::config (
 			key		=> 'PromptOnQuit',
 			value	=> 'NO',
 		}
+		
+		##Not sure I want to configure this, needs a bit of thought.
+		#boxen::osx_defaults { 'Bartender Menu Bar Order':
+		#	domain	=> 'com.surteesstudios.Bartender',
+		#	key		=> 'appBartenderOrder',
+		#	value	=> ['Notification Center', ],
+		#}
 }
