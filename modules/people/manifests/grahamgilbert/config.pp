@@ -32,7 +32,7 @@ class people::grahamgilbert::config (
 		}
 		
 		file {"/Users/${::luser}/Library/Application Support/Chocolat":
-			ensure => present,
+			ensure => directory,
 		}
 		
 		file { "/Users/${::luser}/Library/Application Support/Chocolat/Truffles":
