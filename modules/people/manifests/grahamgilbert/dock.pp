@@ -30,12 +30,11 @@ class people::grahamgilbert::dock (
 		require => Class['chocolat'],
 	}
 	
-	dockutil::item { 'Colloquy':
-		item => "/Applications/Colloquy.app",
-		label	=> "Colloquy",
+	dockutil::item { 'Textual':
+		item => "/Applications/Textual.app",
+		label	=> "Textual",
 		position => 4,
 		action => "add",
-		require => Class['colloquy'],
 	}
 	
 	dockutil::item { 'VMWare Fusion':
