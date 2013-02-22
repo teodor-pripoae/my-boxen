@@ -87,4 +87,28 @@ class people::grahamgilbert::config (
 		  	domain => 'com.apple.LaunchServices',
 		  	value  => 'true',
 		}
+		
+		boxen::osx_defaults { 'Remove Alfred Hat from the Menu Bar':
+			domain	=> 'com.alfredapp.Alfred',
+			key		=> 'appearance.hideStatusBarIcon',
+			value	=> 'YES',
+		}
+		
+		boxen::osx_defaults { 'Stop iTerm nagging about closing':
+			domain	=> 'com.googlecode.iterm2',
+			key		=> 'PromptOnClose',
+			value	=> 'NO',
+		}
+		
+		boxen::osx_defaults { 'iTerm stays open when all windows are shut':
+			domain	=> 'com.googlecode.iterm2',
+			key		=> 'QuitWhenAllWindowsClosed',
+			value	=> 'NO',
+		}
+		
+		boxen::osx_defaults { 'Stop iTerm nagging about quitting':
+			domain	=> 'com.googlecode.iterm2',
+			key		=> 'PromptOnQuit',
+			value	=> 'NO',
+		}
 }

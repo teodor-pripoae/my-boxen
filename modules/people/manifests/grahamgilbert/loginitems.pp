@@ -9,5 +9,13 @@ class people::grahamgilbert::loginitems (
 		path => '/Applications/Alfred.app',
 		hidden => true,
 		require => Class['alfred'],
+		}
+		
+		
+	osx_login_item { 'Bartender':
+		name => 'Bartender',
+		path => '/Applications/Bartender.app',
+		hidden => true,
+		require => Package['Bartender'],
 		}	
 }
