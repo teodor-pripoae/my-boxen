@@ -18,4 +18,11 @@ class people::grahamgilbert::loginitems (
 		hidden => true,
 		require => Package['Bartender'],
 		}	
+		
+	osx_login_item { 'Dropbox':
+	   name => 'Dropbox',
+	   path => '/Applications/Dropbox.app',
+	   hidden => true,
+	   require => Class['dropbox'],
+	   }
 }

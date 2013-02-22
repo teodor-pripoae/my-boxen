@@ -34,7 +34,17 @@ class people::grahamgilbert::applications {
   	}
   
   	package { 'Bartender':
-  		source => 'http://www.macbartender.com/Demo/Bartender.zip',
-  		provider => compressed_app,
+  		source  => 'http://www.macbartender.com/Demo/Bartender.zip',
+  		provider    => compressed_app,
   	}
+  	
+  	package { 'Crashplan':
+  	    source   => 'http://download.crashplan.com/installs/mac/install/CrashPlan/CrashPlan_3.2.1_Mac.dmg',
+        provider => pkgdmg,
+  	}
+  	
+  	package { 'Transmit':
+  	 source      => 'http://www.panic.com/transmit/d/Transmit%204.3.2.zip',
+  	 provider    => compress_app,
+    }
 }
