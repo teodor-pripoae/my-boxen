@@ -42,7 +42,7 @@ class people::grahamgilbert::dock (
 		label	=> "VMWare Fusion",
 		position => 5,
 		action => "add",
-		
+		require => Package['VMWare Fusion'],
 	}
 	
 	dockutil::item { 'GitHub':

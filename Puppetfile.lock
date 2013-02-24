@@ -89,6 +89,11 @@ GITHUBTARBALL
     osx (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-python
+  specs:
+    python (1.0.1)
+
+GITHUBTARBALL
   remote: boxen/puppet-ruby
   specs:
     ruby (1.0.0)
@@ -102,6 +107,11 @@ GITHUBTARBALL
   remote: boxen/puppet-virtualbox
   specs:
     virtualbox (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-xquartz
+  specs:
+    xquartz (1.0.0)
 
 GITHUBTARBALL
   remote: cprice-puppet/puppetlabs-inifile
@@ -152,8 +162,10 @@ DEPENDENCIES
   nvm (= 1.0.0)
   onepassword (= 1.0.0)
   osx (= 1.0.0)
+  python (= 1.0.1)
   ruby (= 1.0.0)
   stdlib (= 3.0.0)
   sudo (= 1.0.0)
   virtualbox (= 1.0.0)
+  xquartz (= 1.0.0)
 

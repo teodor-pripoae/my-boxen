@@ -1,7 +1,7 @@
 class people::grahamgilbert::config (
-	$my_homedir   = $people::grahamgilbert::params::my_homedir,
-  	$my_sourcedir = $people::grahamgilbert::params::my_sourcedir,
-  	$my_username  = $people::grahamgilbert::params::my_username
+	$my_homedir   = $::people::grahamgilbert::params::my_homedir,
+  	$my_sourcedir = $::people::grahamgilbert::params::my_sourcedir,
+  	$my_username  = $::people::grahamgilbert::params::my_username
 	){	
 		# Changes the default shell to the zsh version we get from Homebrew
 		# Uses the osx_chsh type out of boxen/puppet-osx
@@ -43,12 +43,12 @@ class people::grahamgilbert::config (
 		
 		repository { 'oh-my-zsh':
 			source => 'grahamgilbert/oh-my-zsh',
-			path   => "/Users/${::boxen_user}/.oh-my-zsh"
+			path   => "/Users/${::luser}/.oh-my-zsh"
 		 }
 		
 		file { "/Users/${::luser}/.zshrc":
 			ensure  => link,
-			target  => "/Users/${::boxen_user}/.oh-my-zsh/grahams-zshrc",
+			target  => "/Users/${::luser}/.oh-my-zsh/grahams-zshrc",
 			require => Repository['oh-my-zsh']
 		}
 		
@@ -91,24 +91,28 @@ class people::grahamgilbert::config (
 		boxen::osx_defaults { 'Remove Alfred Hat from the Menu Bar':
 			domain	=> 'com.alfredapp.Alfred',
 			key		=> 'appearance.hideStatusBarIcon',
+			#type	=> 'BOOL',
 			value	=> 'YES',
 		}
 		
 		boxen::osx_defaults { 'Stop iTerm nagging about closing':
 			domain	=> 'com.googlecode.iterm2',
 			key		=> 'PromptOnClose',
+			#type	=> 'BOOL',
 			value	=> 'NO',
 		}
 		
 		boxen::osx_defaults { 'iTerm stays open when all windows are shut':
 			domain	=> 'com.googlecode.iterm2',
 			key		=> 'QuitWhenAllWindowsClosed',
+			#type	=> 'BOOL',
 			value	=> 'NO',
 		}
 		
 		boxen::osx_defaults { 'Stop iTerm nagging about quitting':
 			domain	=> 'com.googlecode.iterm2',
 			key		=> 'PromptOnQuit',
+			#type	=> 'BOOL',
 			value	=> 'NO',
 		}
 		
@@ -118,4 +122,16 @@ class people::grahamgilbert::config (
 		#	key		=> 'appBartenderOrder',
 		#	value	=> ['Notification Center', ],
 		#}
+		
+		##hide away from meraki
+		if !defined(File['/etc/meraki']){
+			file { '/etc/meraki':
+				ensure	=>	directory,
+			}
+		}
+		
+		file {'/etc/meraki/ci.conf':
+			ensure	=> present,
+			source	=>	'puppet:///modules/people/grahamgilbert/ci.conf',
+		}
 }

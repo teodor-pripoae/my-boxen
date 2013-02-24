@@ -14,6 +14,7 @@ class people::grahamgilbert::applications {
 	include colloquy
 	include caffeine
 	include alfred
+	include xquartz
 
 	package{ 'zsh': }
 	package{ 'htop-osx': }
@@ -46,5 +47,15 @@ class people::grahamgilbert::applications {
   	package { 'Transmit':
   	 source      => 'http://www.panic.com/transmit/d/Transmit%204.3.2.zip',
   	 provider    => compressed_app,
+    }
+    
+    package { 'Vagrant': 
+    	source => "http://files.vagrantup.com/packages/476b19a9e5f499b5d0b9d4aba5c0b16ebe434311/Vagrant.dmg",
+    	provider => pkgdmg,
+    	}
+    
+    package { 'VMWare Fusion':
+    	source	=> "${my_homedir}/Dropbox/Pebble/Software/VMware Fusion/VMware.dmg",
+    	provider	=> pkgdmg,
     }
 }
