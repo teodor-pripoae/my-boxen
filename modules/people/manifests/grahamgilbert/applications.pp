@@ -10,12 +10,12 @@ class people::grahamgilbert::applications {
 	include dropbox
 	include iterm2::dev
 	include chocolat
+	include crashplan
 	include virtualbox
 	include colloquy
 	include caffeine
 	include alfred
 	include xquartz
-	include kaleidoscope
 
 	package{ 'zsh': }
 	package{ 'htop-osx': }
@@ -40,15 +40,15 @@ class people::grahamgilbert::applications {
   		provider    => compressed_app,
   	}
   	
-  	package { 'Crashplan':
-  	    source   => 'http://download.crashplan.com/installs/mac/install/CrashPlan/CrashPlan_3.2.1_Mac.dmg',
-        provider => pkgdmg,
-  	}
-  	
   	package { 'Transmit':
   	 source      => 'http://www.panic.com/transmit/d/Transmit%204.3.2.zip',
   	 provider    => compressed_app,
     }
+    
+    package { 'Kaleidoscope':
+    	 source      => 'http://www.kaleidoscopeapp.com/download',
+    	 provider    => compressed_app,
+      }
     
     package { 'Vagrant': 
     	source => "http://files.vagrantup.com/packages/476b19a9e5f499b5d0b9d4aba5c0b16ebe434311/Vagrant.dmg",
@@ -56,7 +56,7 @@ class people::grahamgilbert::applications {
     	}
     
     package { 'VMWare Fusion':
-    	source	=> "${my_homedir}/Dropbox/Pebble/Software/VMware Fusion/VMware.dmg",
+    	source	=> "/Users/${::luser}/Dropbox/Pebble/Software/VMware Fusion/VMware.dmg",
     	provider	=> pkgdmg,
     }
 }

@@ -9,7 +9,7 @@ class people::grahamgilbert::loginitems (
 		path => '/Applications/Alfred.app',
 		hidden => true,
 		require => Class['alfred'],
-		}
+	}
 		
 		
 	osx_login_item { 'Bartender':
@@ -17,12 +17,18 @@ class people::grahamgilbert::loginitems (
 		path => '/Applications/Bartender.app',
 		hidden => true,
 		require => Package['Bartender'],
-		}	
+	}	
 		
 	osx_login_item { 'Dropbox':
 	   name => 'Dropbox',
 	   path => '/Applications/Dropbox.app',
 	   hidden => true,
 	   require => Class['dropbox'],
-	   }
+	}
+	   
+	osx_login_item { 'Kuvva':
+		name => 'Kuvva',
+		path => '/Applications/Kuvva.app',
+		hidden => true,
+	}
 }
