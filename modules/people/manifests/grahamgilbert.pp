@@ -27,8 +27,8 @@ class people::grahamgilbert{
         }
     }
     
-    file {"/Users/${::luser}/src":
-        owner   =>  $::luser,
-        mode    =>  0700,
-    }
+    #file {"/Users/${::luser}/src":
+    #    owner   =>  $::luser,
+    #    mode    =>  0700,
+    #}
 }
