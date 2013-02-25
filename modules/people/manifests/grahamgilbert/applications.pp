@@ -4,7 +4,7 @@ class people::grahamgilbert::applications {
 	#homebrew::tap { 'cowsay':
 	#	source => 'puppet://modules/cowsay/tap',
 	#}
-	include istatmenus3
+	include istatmenus4
 	include chrome
 	include onepassword
 	include dropbox
