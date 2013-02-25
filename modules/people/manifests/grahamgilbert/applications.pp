@@ -4,7 +4,7 @@ class people::grahamgilbert::applications {
 	#homebrew::tap { 'cowsay':
 	#	source => 'puppet://modules/cowsay/tap',
 	#}
-	include istatmenus4
+	#include istatmenus4
 	include chrome
 	include onepassword
 	include dropbox
@@ -41,19 +41,23 @@ class people::grahamgilbert::applications {
   	}
   	
   	package { 'Transmit':
-  	 source      => 'http://www.panic.com/transmit/d/Transmit%204.3.2.zip',
-  	 provider    => compressed_app,
+  		source      => 'http://www.panic.com/transmit/d/Transmit%204.3.2.zip',
+  		provider    => compressed_app,
     }
     
     package { 'Kaleidoscope':
     	 source      => 'http://www.kaleidoscopeapp.com/download',
     	 provider    => compressed_app,
-      }
-    
+    }  
+      
+    package { 'iStat Menus 4':
+    	 source      => 'http://s3.amazonaws.com/bjango/files/istatmenus4/istatmenus4.04.zip',
+    	 provider    => compressed_app,
+    }
     package { 'Vagrant': 
     	source => "http://files.vagrantup.com/packages/476b19a9e5f499b5d0b9d4aba5c0b16ebe434311/Vagrant.dmg",
     	provider => pkgdmg,
-    	}
+    }
     
     package { 'VMWare Fusion':
     	source	=> "/Users/${::luser}/Dropbox/Pebble/Software/VMware Fusion/VMware.dmg",
