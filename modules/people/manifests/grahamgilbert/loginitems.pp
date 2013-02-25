@@ -25,10 +25,4 @@ class people::grahamgilbert::loginitems (
 	   hidden => true,
 	   require => Class['dropbox'],
 	}
-	   
-	osx_login_item { 'Kuvva':
-		name => 'Kuvva',
-		path => '/Applications/Kuvva.app',
-		hidden => true,
-	}
 }

@@ -3,8 +3,10 @@ class people::grahamgilbert::config (
   	$my_sourcedir = $::people::grahamgilbert::params::my_sourcedir,
   	$my_username  = $::people::grahamgilbert::params::my_username
 	){	
-		# Changes the default shell to the zsh version we get from Homebrew
-		# Uses the osx_chsh type out of boxen/puppet-osx
+		# Put the default ruby back to 1.8.7
+		
+		class { 'ruby::global': version => '1.8.7' }
+		
 		osx_chsh { $::luser:
 			shell   => '/opt/boxen/homebrew/bin/zsh',
 			require => Package['zsh'],
@@ -95,26 +97,26 @@ class people::grahamgilbert::config (
 			value	=> 'YES',
 		}
 		
-		boxen::osx_defaults { 'Stop iTerm nagging about closing':
-			domain	=> 'com.googlecode.iterm2',
-			key		=> 'PromptOnClose',
+		#boxen::osx_defaults { 'Stop iTerm nagging about closing':
+		#	domain	=> 'com.googlecode.iterm2',
+		#	key		=> 'PromptOnClose',
 			#type	=> 'BOOL',
-			value	=> 'NO',
-		}
+		#	value	=> 'NO',
+		#}
 		
-		boxen::osx_defaults { 'iTerm stays open when all windows are shut':
-			domain	=> 'com.googlecode.iterm2',
-			key		=> 'QuitWhenAllWindowsClosed',
+		#boxen::osx_defaults { 'iTerm stays open when all windows are shut':
+		#	domain	=> 'com.googlecode.iterm2',
+		#	key		=> 'QuitWhenAllWindowsClosed',
 			#type	=> 'BOOL',
-			value	=> 'NO',
-		}
+		#	value	=> 'NO',
+		#}
 		
-		boxen::osx_defaults { 'Stop iTerm nagging about quitting':
-			domain	=> 'com.googlecode.iterm2',
-			key		=> 'PromptOnQuit',
+		#boxen::osx_defaults { 'Stop iTerm nagging about quitting':
+		#	domain	=> 'com.googlecode.iterm2',
+		#	key		=> 'PromptOnQuit',
 			#type	=> 'BOOL',
-			value	=> 'NO',
-		}
+		#	value	=> 'NO',
+		#}
 		
 		##Not sure I want to configure this, needs a bit of thought.
 		#boxen::osx_defaults { 'Bartender Menu Bar Order':
