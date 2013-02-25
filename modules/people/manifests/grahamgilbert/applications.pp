@@ -15,6 +15,7 @@ class people::grahamgilbert::applications {
 	include caffeine
 	include alfred
 	include xquartz
+	include kaleidoscope
 
 	package{ 'zsh': }
 	package{ 'htop-osx': }
