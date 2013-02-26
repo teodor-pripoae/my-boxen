@@ -63,4 +63,5 @@ class people::grahamgilbert::applications {
     	source	=> "/Users/${::luser}/Dropbox/Pebble/Software/VMware Fusion/VMware.dmg",
     	provider	=> pkgdmg,
     }
+    
 }
