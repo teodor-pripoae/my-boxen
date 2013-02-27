@@ -64,4 +64,9 @@ class people::grahamgilbert::applications {
     	provider	=> pkgdmg,
     }
     
+    package { 'Remote Desktop':
+    	source	=> "/Users/${::luser}/Dropbox/Pebble/Software/Remote Desktop/RemoteDesktop.dmg",
+    	provider	=> pkgdmg,
+    }
+    
 }
