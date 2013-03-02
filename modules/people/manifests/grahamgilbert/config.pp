@@ -5,7 +5,7 @@ class people::grahamgilbert::config (
 	){	
 		# Put the default ruby back to 1.8.7
 		
-		#class { 'ruby::global': version => '1.8.7' }
+		class { 'ruby::global': version => '1.9.3' }
 		
 		osx_chsh { $::luser:
 			shell   => '/opt/boxen/homebrew/bin/zsh',
