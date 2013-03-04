@@ -7,57 +7,49 @@ class people::grahamgilbert::dock (
 	include dockutil
 	
 	dockutil::item { 'add chrome':
-		item => "/Applications/Google Chrome.app",
-		label	=> "Google Chrome",
+		item 	 => "/Applications/Google Chrome.app",
+		label	 => "Google Chrome",
 		position => 1,
-		action => "add",
-		require => Class['chrome'],
+		action 	 => "add",
+		require  => Class['chrome'],
 	}
 	
 	dockutil::item { 'Add iTerm':
-		item => "/Applications/iTerm.app",
-		label	=> "iTerm",
-		action => "add",
+		item 	 => "/Applications/iTerm.app",
+		label	 => "iTerm",
+		action 	 => "add",
 		position => 2,
-		require => Class['iterm2::dev'],
+		require	 => Class['iterm2::dev'],
 	}
 	
 	dockutil::item { 'Chocolat':
-		item => "/Applications/Chocolat.app",
-		label	=> "Chocolat",
+		item 	 => "/Applications/Chocolat.app",
+		label	 => "Chocolat",
 		position => 3,
-		action => "add",
-		require => Class['chocolat'],
+		action 	 => "add",
+		require  => Class['chocolat'],
 	}
 	
 	dockutil::item { 'Textual':
-		item => "/Applications/Textual.app",
-		label	=> "Textual",
+		item 	 => "/Applications/Textual.app",
+		label	 => "Textual",
 		position => 4,
-		action => "add",
-	}
-	
-	dockutil::item { 'VMWare Fusion':
-		item => "/Applications/VMWare Fusion.app",
-		label	=> "VMWare Fusion",
-		position => 5,
-		action => "add",
-		require => Package['VMWare Fusion'],
+		action 	 => "add",
 	}
 	
 	dockutil::item { 'GitHub':
-		item => "/Applications/GitHub.app",
-		label	=> "GitHub",
+		item  	 => "/Applications/GitHub.app",
+		label	 => "GitHub",
 		position => 6,
-		action => "add",
-		require => Package['Github for Mac'],
+		action	 => "add",
+		require  => Package['Github for Mac'],
 	}
 	
 	## Remove the default crap	
 	dockutil::item { 'Remove Launchpad':
-		item => "/Applications/Launchpad.app",
+		item 	=> "/Applications/Launchpad.app",
 		label	=> "Launchpad",
-		action => "remove",
+		action	=> "remove",
 	}
 	
 	dockutil::item { 'Remove Mission Control':

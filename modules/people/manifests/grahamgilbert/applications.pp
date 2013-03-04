@@ -69,4 +69,8 @@ class people::grahamgilbert::applications {
     	provider	=> pkgdmg,
     }
     
+    package { 'puppet-lint': 
+        provider => 'gem',
+    }
+    
 }
