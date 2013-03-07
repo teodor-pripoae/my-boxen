@@ -75,8 +75,8 @@ class people::grahamgilbert::applications {
         provider => compressed_app,
     }
     
-    package { 'puppet-lint': 
-        provider => 'gem',
-    }
+    #package { 'puppet-lint': 
+    #    provider => 'gem',
+    #}
     
 }
