@@ -56,18 +56,23 @@ class people::grahamgilbert::applications {
     	 provider    => compressed_app,
     }
     package { 'Vagrant': 
-    	source => "http://files.vagrantup.com/packages/476b19a9e5f499b5d0b9d4aba5c0b16ebe434311/Vagrant.dmg",
+    	source   => "http://files.vagrantup.com/packages/476b19a9e5f499b5d0b9d4aba5c0b16ebe434311/Vagrant.dmg",
     	provider => pkgdmg,
     }
     
     package { 'VMWare Fusion':
-    	source	=> "/Users/${::luser}/Dropbox/Pebble/Software/VMware Fusion/VMware.dmg",
-    	provider	=> pkgdmg,
+    	source	 => "/Users/${::luser}/Dropbox/Pebble/Software/VMware Fusion/VMware.dmg",
+    	provider => pkgdmg,
     }
     
     package { 'Remote Desktop':
-    	source	=> "/Users/${::luser}/Dropbox/Pebble/Software/Remote Desktop/RemoteDesktop.dmg",
-    	provider	=> pkgdmg,
+    	source	 => "/Users/${::luser}/Dropbox/Pebble/Software/Remote Desktop/RemoteDesktop.dmg",
+    	provider => pkgdmg,
+    }
+    
+    package { 'Kiwi':
+        source   => "http://s3.amazonaws.com/Kiwi/Kiwi_3.0.1_1125.zip",
+        provider => compressed_app,
     }
     
     package { 'puppet-lint': 
