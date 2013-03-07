@@ -136,6 +136,11 @@ GITHUBTARBALL
     dockutil (0.1.0)
 
 GITHUBTARBALL
+  remote: kevinSuttle/puppet-appcleaner
+  specs:
+    appcleaner (1.0.0)
+
+GITHUBTARBALL
   remote: pebbleit/puppet-macdefaults
   specs:
     macdefaults (0.0.1)
@@ -147,6 +152,7 @@ GITHUBTARBALL
 
 DEPENDENCIES
   alfred (= 1.0.1)
+  appcleaner (= 1.0.0)
   boxen (= 1.0.2)
   caffeine (= 1.0.0)
   chocolat (= 1.0.0)
