@@ -20,6 +20,7 @@ class people::grahamgilbert::applications {
 
 	package{ 'zsh': }
 	package{ 'htop-osx': }
+	package{ 'tree': }
 
 	package { 'Github for Mac':
     	source   => 'https://github-central.s3.amazonaws.com/mac%2FGitHub%20for%20Mac%20111.zip',
