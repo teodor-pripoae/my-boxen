@@ -62,13 +62,21 @@ class people::grahamgilbert::applications {
     }
     
     package { 'VMWare Fusion':
-    	source	 => "/Users/${::luser}/Dropbox/Pebble/Software/VMware Fusion/VMware.dmg",
+    	source	 => "/Users/${::luser}/Dropbox/Software/VMware Fusion/VMware.dmg",
     	provider => pkgdmg,
     }
     
     package { 'Remote Desktop':
-    	source	 => "/Users/${::luser}/Dropbox/Pebble/Software/Remote Desktop/RemoteDesktop.dmg",
+    	source	 => "/Users/${::luser}/Dropbox/Software/Remote Desktop/RemoteDesktop.dmg",
     	provider => pkgdmg,
+    }
+    
+    ##install Meraki Systems Manager on the home machine
+    if ($::hostname == "Loki"){
+        package { 'Meraki Systems Manager':
+            source   =>  "/Users/${::luser}/Dropbox/Software/Home Meraki/MerakiSM-Agent-systems-manager.pkg",
+            provider => pkg,
+        }
     }
     
     package { 'Kiwi':
