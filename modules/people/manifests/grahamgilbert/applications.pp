@@ -48,7 +48,7 @@ class people::grahamgilbert::applications {
     }
     
     package { 'Kaleidoscope':
-    	 source      => 'http://www.kaleidoscopeapp.com/download',
+    	 source      => 'http://cdn.kaleidoscopeapp.com/releases/Kaleidoscope-2.0.1-114.zip',
     	 provider    => compressed_app,
     }  
       
