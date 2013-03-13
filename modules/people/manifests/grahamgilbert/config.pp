@@ -97,11 +97,11 @@ class people::grahamgilbert::config (
 			value	=> 'YES',
 		}
 		
-		#boxen::osx_defaults { 'Stop iTerm nagging about closing':
-		#	domain	=> 'com.googlecode.iterm2',
-		#	key		=> 'PromptOnClose',
+		boxen::osx_defaults { 'Make Go2Shell Use iTerm':
+			domain	=> 'com.alice.mac.go2shell',
+			key		=> 'usingTerminal',
 			#type	=> 'BOOL',
-		#	value	=> 'NO',
+			value	=> '2',
 		#}
 		
 		#boxen::osx_defaults { 'iTerm stays open when all windows are shut':
