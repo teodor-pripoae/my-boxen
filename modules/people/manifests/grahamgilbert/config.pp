@@ -102,7 +102,7 @@ class people::grahamgilbert::config (
 			key		=> 'usingTerminal',
 			#type	=> 'BOOL',
 			value	=> '2',
-		#}
+		}
 		
 		#boxen::osx_defaults { 'iTerm stays open when all windows are shut':
 		#	domain	=> 'com.googlecode.iterm2',
