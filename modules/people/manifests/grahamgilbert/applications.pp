@@ -84,6 +84,11 @@ class people::grahamgilbert::applications {
         provider => compressed_app,
     }
     
+    package { 'unetbooin':
+    	source	 => "http://unetbootin.sourceforge.net/unetbootin-mac-latest.zip",
+    	provider => compressed_app,
+    }
+    
     #package { 'puppet-lint': 
     #    provider => 'gem',
     #}
