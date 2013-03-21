@@ -5,7 +5,7 @@ class projects::pebble_internal (
 	){
 	
 	boxen::project { 'pebble_internal':
-		dir		=>	"${my_sourcedir}/Work/puppet-internal",
+		dir		=>	"${my_sourcedir}/Work/pebble-internal",
 		source	=>	'pebbleit/Pebble-Internal',
 	}
 }
