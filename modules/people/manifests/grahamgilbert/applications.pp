@@ -17,10 +17,16 @@ class people::grahamgilbert::applications {
 	include caffeine
 	include alfred
 	include xquartz
+	include vmware_fusion
 
 	package{ 'zsh': }
 	package{ 'htop-osx': }
 	package{ 'tree': }
+	include vagrant
+	
+	vagrant::plugin { 'vagrant-vmware-fusion':
+	  license => '/Users/${::luser}/Dropbox/Software/Vagrant/fusion-license.lic',
+	}
 
 	package { 'Github for Mac':
     	source   => 'https://github-central.s3.amazonaws.com/mac%2FGitHub%20for%20Mac%20111.zip',
@@ -56,16 +62,7 @@ class people::grahamgilbert::applications {
     	 source      => 'http://s3.amazonaws.com/bjango/files/istatmenus4/istatmenus4.04.zip',
     	 provider    => compressed_app,
     }
-    package { 'Vagrant': 
-    	source   => "http://files.vagrantup.com/packages/476b19a9e5f499b5d0b9d4aba5c0b16ebe434311/Vagrant.dmg",
-    	provider => pkgdmg,
-    }
-    
-    package { 'VMWare Fusion':
-    	source	 => "/Users/${::luser}/Dropbox/Software/VMware Fusion/VMware.dmg",
-    	provider => pkgdmg,
-    }
-    
+  
     package { 'Remote Desktop':
     	source	 => "/Users/${::luser}/Dropbox/Software/Remote Desktop/RemoteDesktop.dmg",
     	provider => pkgdmg,
