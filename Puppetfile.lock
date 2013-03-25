@@ -6,11 +6,6 @@ GIT
     istatmenus4 (0.0.1)
 
 GITHUBTARBALL
-  remote: boxen/puppet-alfred
-  specs:
-    alfred (1.0.1)
-
-GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
     boxen (1.2.0)
@@ -131,6 +126,11 @@ GITHUBTARBALL
     inifile (0.9.0)
 
 GITHUBTARBALL
+  remote: grahamgilbert/puppet-alfred2
+  specs:
+    alfred2 (0.0.1)
+
+GITHUBTARBALL
   remote: grahamgilbert/puppet-chocolat
   specs:
     chocolat (1.0.0)
@@ -156,7 +156,7 @@ GITHUBTARBALL
     stdlib (3.0.0)
 
 DEPENDENCIES
-  alfred (= 1.0.1)
+  alfred2 (= 0.0.1)
   appcleaner (= 1.0.0)
   boxen (= 1.2.0)
   caffeine (= 1.0.0)
