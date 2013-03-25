@@ -15,7 +15,7 @@ class people::grahamgilbert::applications {
 	include virtualbox
 	#include colloquy
 	include caffeine
-	include alfred
+	include alfred2
 	include xquartz
 	include vmware_fusion
 
