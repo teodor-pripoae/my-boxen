@@ -4,9 +4,9 @@ class people::grahamgilbert::loginitems (
   	$my_username  = $people::grahamgilbert::params::my_username
 	){
 	
-	osx_login_item { 'Alfred':
-		name => 'Alfred',
-		path => '/Applications/Alfred.app',
+	osx_login_item { 'Alfred 2':
+		name => 'Alfred 2',
+		path => '/Applications/Alfred 2.app',
 		hidden => true,
 		require => Class['alfred2'],
 	}
