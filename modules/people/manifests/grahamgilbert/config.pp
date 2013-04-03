@@ -24,6 +24,43 @@ class people::grahamgilbert::config (
 			}
 		}
 		
+		# TextMate
+		
+		repository { 'puppet-textmate-bundle':
+			source => 'masterzen/puppet-textmate-bundle',
+			path   => "${my_sourcedir}/Others/puppet-textmate-bundle",
+			require => [
+						 File["${my_sourcedir}/Others"],
+						 File["/Users/${::luser}/Library/Application Support/TextMate/Managed/Bundles"],
+						 ]
+		}
+		
+		file {"/Users/${::luser}/Library/Application Support/TextMate":
+			ensure => directory,
+		}
+		
+		file {"/Users/${::luser}/Library/Application Support/TextMate/Managed":
+			ensure => directory,
+		}
+		
+		file {"/Users/${::luser}/Library/Application Support/TextMate/Managed/Bundles":
+			ensure => directory,
+		}
+		
+		file { "/Users/${::luser}/Library/Application Support/TextMate/Managed/Bundles/Puppet.tmbundle":
+			ensure  => link,
+			target  => "${my_sourcedir}/Others/puppet-textmate-bundle/Puppet.tmbundle",
+			require => Repository['puppet-textmate-bundle']
+		}
+        
+		boxen::osx_defaults { 'TextMate File Browser Placement':
+			  ensure => present,
+			  domain => 'com.macromates.TextMate.preview',
+			  key    => 'fileBrowserPlacement',
+			  value  => 'left',
+		}
+        # Chocolat
+		
 		repository { 'Chocolat Truffles':
 			source => 'grahamgilbert/chocolat-truffles',
 			path   => "${my_sourcedir}/Mine/chocolat-truffles",

@@ -18,6 +18,7 @@ class people::grahamgilbert::applications {
 	include alfred2
 	include xquartz
 	include vmware_fusion
+	include textmate::textmate2::release
 
 	package{ 'zsh': }
 	package{ 'htop-osx': }

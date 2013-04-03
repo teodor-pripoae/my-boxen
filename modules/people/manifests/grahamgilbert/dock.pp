@@ -22,18 +22,26 @@ class people::grahamgilbert::dock (
 		require	 => Class['iterm2::dev'],
 	}
 	
-	dockutil::item { 'Chocolat':
-		item 	 => "/Applications/Chocolat.app",
-		label	 => "Chocolat",
+	dockutil::item { 'Textmate2':
+		item 	 => "/Applications/Textmate.app",
+		label	 => "TextMate",
 		position => 3,
 		action 	 => "add",
-		require  => Class['chocolat'],
+		require  => Class['textmate::textmate2::release'],
 	}
+	
+	# dockutil::item { 'Chocolat':
+# 		item 	 => "/Applications/Chocolat.app",
+# 		label	 => "Chocolat",
+# 		position => 4,
+# 		action 	 => "add",
+# 		require  => Class['chocolat'],
+# 	}
 	
 	dockutil::item { 'Textual':
 		item 	 => "/Applications/Textual.app",
 		label	 => "Textual",
-		position => 4,
+		position => 5,
 		action 	 => "add",
 	}
 	
