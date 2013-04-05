@@ -31,11 +31,11 @@ class people::grahamgilbert::config (
 			path   => "${my_sourcedir}/Others/puppet-textmate-bundle",
 			require => [
 						 File["${my_sourcedir}/Others"],
-						 File["/Users/${::luser}/Library/Application Support/TextMate/Managed/Bundles"],
+						 #File["/Users/${::luser}/Library/Application Support/TextMate/Managed/Bundles"],
 						 ]
 		}
 		
-		file {"/Users/${::luser}/Library/Application Support/TextMate":
+		/* file {"/Users/${::luser}/Library/Application Support/TextMate":
 			ensure => directory,
 		}
 		
@@ -45,13 +45,13 @@ class people::grahamgilbert::config (
 		
 		file {"/Users/${::luser}/Library/Application Support/TextMate/Managed/Bundles":
 			ensure => directory,
-		}
+		} */
 		
-		file { "/Users/${::luser}/Library/Application Support/TextMate/Managed/Bundles/Puppet.tmbundle":
+		 file { "/Users/${::luser}/Library/Application Support/TextMate/Managed/Bundles/Puppet.tmbundle":
 			ensure  => link,
 			target  => "${my_sourcedir}/Others/puppet-textmate-bundle/Puppet.tmbundle",
 			require => Repository['puppet-textmate-bundle']
-		}
+		} 
         
 		boxen::osx_defaults { 'TextMate File Browser Placement':
 			  ensure => present,
