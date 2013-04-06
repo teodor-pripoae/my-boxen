@@ -143,7 +143,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: grahamgilbert/puppet-dockutil
   specs:
-    dockutil (0.1.0)
+    dockutil (0.1.1)
 
 GITHUBTARBALL
   remote: kevinSuttle/puppet-appcleaner
@@ -169,7 +169,7 @@ DEPENDENCIES
   chrome (= 1.1.0)
   crashplan (= 1.0.1)
   dnsmasq (= 1.0.0)
-  dockutil (= 0.1.0)
+  dockutil (= 0.1.1)
   dropbox (= 1.1.0)
   gcc (= 1.0.0)
   git (= 1.1.0)
