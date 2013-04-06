@@ -4,8 +4,8 @@ class projects::psu_puppet_demo (
   	$my_username  = $people::grahamgilbert::params::my_username
 	){
 	
-	boxen::project { 'psu_puppet_demo':
-		dir		=>	"${my_sourcedir}/Mine/psu-puppet-demo",
-		source	=>	'grahamgilbert/psu-puppet-demo',
+	boxen::project { 'psu_puppet_2013':
+		dir		=>	"${my_sourcedir}/Mine/psu_puppet_2013",
+		source	=>	'grahamgilbert/psu_puppet_2013',
 	}
 }

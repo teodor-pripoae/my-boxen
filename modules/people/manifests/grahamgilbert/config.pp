@@ -34,6 +34,21 @@ class people::grahamgilbert::config (
 						 #File["/Users/${::luser}/Library/Application Support/TextMate/Managed/Bundles"],
 						 ]
 		}
+        
+		repository { 'copy-with-style-tmbundle':
+            source => 'sandropaganotti/copy-with-style-tmbundle',
+            path   => "${my_sourcedir}/Others/copy-with-style-tmbundle",
+            require => [
+                         File["${my_sourcedir}/Others"],
+                         File["/Users/${::luser}/Library/Application Support/TextMate/Managed/Bundles"],
+                         ]
+        }
+        
+        file { "/Users/${::luser}/Library/Application Support/TextMate/Managed/Bundles/Copy with Style.tmbundle":
+            ensure  => link,
+            target  => "${my_sourcedir}/Others/copy-with-style-tmbundle",
+            require => Repository['copy-with-style-tmbundle']
+        }
 		
 		/* file {"/Users/${::luser}/Library/Application Support/TextMate":
 			ensure => directory,
@@ -51,7 +66,12 @@ class people::grahamgilbert::config (
 			ensure  => link,
 			target  => "${my_sourcedir}/Others/puppet-textmate-bundle/Puppet.tmbundle",
 			require => Repository['puppet-textmate-bundle']
+<<<<<<< HEAD
 		} 
+=======
+		}
+ 
+>>>>>>> PSU Demo Repo Update
         
 		boxen::osx_defaults { 'TextMate File Browser Placement':
 			  ensure => present,
@@ -154,13 +174,12 @@ class people::grahamgilbert::config (
 			#type	=> 'BOOL',
 		#	value	=> 'NO',
 		#}
-		
-		##Not sure I want to configure this, needs a bit of thought.
-		#boxen::osx_defaults { 'Bartender Menu Bar Order':
-		#	domain	=> 'com.surteesstudios.Bartender',
-		#	key		=> 'appBartenderOrder',
-		#	value	=> ['Notification Center', ],
-		#}
+
+		boxen::osx_defaults { 'Disk util debug menu':
+			domain	=> 'com.apple.DiskUtility',
+			key		=> 'DUDebugMenuEnabled',
+			value	=> 1,
+		}
 		
 		##hide away from meraki
 		if !defined(File['/etc/meraki']){
