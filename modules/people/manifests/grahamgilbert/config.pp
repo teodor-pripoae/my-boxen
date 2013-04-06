@@ -66,12 +66,7 @@ class people::grahamgilbert::config (
 			ensure  => link,
 			target  => "${my_sourcedir}/Others/puppet-textmate-bundle/Puppet.tmbundle",
 			require => Repository['puppet-textmate-bundle']
-<<<<<<< HEAD
 		} 
-=======
-		}
- 
->>>>>>> PSU Demo Repo Update
         
 		boxen::osx_defaults { 'TextMate File Browser Placement':
 			  ensure => present,
