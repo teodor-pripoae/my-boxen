@@ -29,10 +29,7 @@ class people::grahamgilbert::config (
 		repository { 'puppet-textmate-bundle':
 			source => 'masterzen/puppet-textmate-bundle',
 			path   => "${my_sourcedir}/Others/puppet-textmate-bundle",
-			require => [
-						 File["${my_sourcedir}/Others"],
-						 #File["/Users/${::luser}/Library/Application Support/TextMate/Managed/Bundles"],
-						 ]
+			require => File["${my_sourcedir}/Others"],
 		}
 		
 		/* file {"/Users/${::luser}/Library/Application Support/TextMate":
