@@ -63,9 +63,10 @@ node default {
   #}
 
   # node versions
-  include nodejs::0-4
-  include nodejs::0-6
-  include nodejs::0-8
+  include nodejs::0_4
+  include nodejs::0_6
+  include nodejs::0_8
+  include nodejs::0_10
 
   # default ruby versions
   include ruby::1_8_7
