@@ -93,7 +93,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-repository
   specs:
-    repository (2.0.0)
+    repository (1.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-ruby
@@ -190,7 +190,7 @@ DEPENDENCIES
   onepassword (= 1.0.0)
   osx (= 1.0.0)
   python (= 1.1.1)
-  repository (= 2.0.0)
+  repository (= 1.0.0)
   ruby (= 3.3.1)
   stdlib (= 3.2.0)
   sudo (= 1.0.0)
