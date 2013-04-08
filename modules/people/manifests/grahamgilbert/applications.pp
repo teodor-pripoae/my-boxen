@@ -91,4 +91,9 @@ class people::grahamgilbert::applications {
     #    provider => 'gem',
     #}
     
+	
+    package { 'Grand Perspective':
+    	source	 => "http://downloads.sourceforge.net/project/grandperspectiv/grandperspective/1.5.1/GrandPerspective-1_5_1.dmg",
+    	provider => appdmg,
+    }
 }
