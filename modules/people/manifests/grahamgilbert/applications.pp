@@ -99,6 +99,6 @@ class people::grahamgilbert::applications {
 	
 	package {'KeyRemap4MacBook':
 		source   => 'http://pqrs.org/macosx/keyremap4macbook/files/KeyRemap4MacBook-8.0.0.dmg',
-		provider => appdmg,
+		provider => pkgdmg,
 	}
 }
