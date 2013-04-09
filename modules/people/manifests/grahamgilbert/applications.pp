@@ -96,4 +96,9 @@ class people::grahamgilbert::applications {
     	source	 => "http://downloads.sourceforge.net/project/grandperspectiv/grandperspective/1.5.1/GrandPerspective-1_5_1.dmg",
     	provider => appdmg,
     }
+	
+	package {'KeyRemap4MacBook':
+		source   => 'http://pqrs.org/macosx/keyremap4macbook/files/KeyRemap4MacBook-8.0.0.dmg',
+		provider => appdmg,
+	}
 }
