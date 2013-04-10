@@ -8,4 +8,14 @@ class projects::pebble_puppet (
 		dir		=>	"${my_sourcedir}/Work/puppet",
 		source	=>	'pebbleit/puppet',
 	}
+    
+	boxen::project { 'pebble_customer':
+		dir		=>	"${my_sourcedir}/Work/customer",
+		source	=>	'pebbleit/customer',
+	}
+    
+	boxen::project { 'pebble_hieradata':
+		dir		=>	"${my_sourcedir}/Work/hieradata",
+		source	=>	'pebbleit/hieradata',
+	}
 }
