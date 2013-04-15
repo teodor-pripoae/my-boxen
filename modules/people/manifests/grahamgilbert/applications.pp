@@ -23,6 +23,7 @@ class people::grahamgilbert::applications {
 	package{ 'zsh': }
 	package{ 'htop-osx': }
 	package{ 'tree': }
+    package{ 'graphviz': }
 	include vagrant
 	
 	vagrant::plugin { 'vagrant-vmware-fusion':
