@@ -167,7 +167,7 @@ class people::grahamgilbert::config (
 		boxen::osx_defaults {'Four finger trackpad swipe':
 			domain => 'com.apple.driver.AppleBluetoothMultitouch.trackpad',
 			key    => 'TrackpadFourFingerVertSwipeGesture',
-			vlaue  => 2,
+			value  => 2,
 		}
 		
 		##hide away from meraki
