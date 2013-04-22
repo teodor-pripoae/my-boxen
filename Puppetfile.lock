@@ -8,7 +8,7 @@ GIT
 GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
-    boxen (2.0.1)
+    boxen (2.1.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-caffeine
@@ -18,7 +18,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-chocolat
   specs:
-    chocolat (1.0.1)
+    chocolat (1.0.2)
 
 GITHUBTARBALL
   remote: boxen/puppet-chrome
@@ -168,9 +168,9 @@ GITHUBTARBALL
 DEPENDENCIES
   alfred2 (= 0.0.1)
   appcleaner (= 1.0.0)
-  boxen (= 2.0.1)
+  boxen (= 2.1.0)
   caffeine (= 1.0.0)
-  chocolat (= 1.0.1)
+  chocolat (= 1.0.2)
   chrome (= 1.1.0)
   crashplan (= 1.0.1)
   dnsmasq (= 1.0.0)
