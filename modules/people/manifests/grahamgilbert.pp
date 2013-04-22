@@ -4,6 +4,7 @@ class people::grahamgilbert{
     include people::grahamgilbert::config
     include people::grahamgilbert::dock
     include people::grahamgilbert::loginitems
+	include people::grahamgilbert::gems
     #include projects::blog
     #include projects::crypt
     #include projects::crypt_server
