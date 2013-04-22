@@ -24,4 +24,9 @@ class people::grahamgilbert::gems (
 		ruby => '1.9.3',
 	}
 	
+	ruby::gem { 'puppet for 1.9.3':
+		gem	 => 'puppet',
+		ruby => '1.9.3',
+	}
+	
 }
