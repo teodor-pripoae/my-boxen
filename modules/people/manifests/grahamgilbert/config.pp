@@ -3,9 +3,9 @@ class people::grahamgilbert::config (
   	$my_sourcedir = $::people::grahamgilbert::params::my_sourcedir,
   	$my_username  = $::people::grahamgilbert::params::my_username
 	){	
-		# Put the default ruby back to 1.8.7
+		# Set the default ruby
 		
-		#class { 'ruby::global': version => '1.9.3' }
+		class { 'ruby::global': version => '1.9.3' }
 		
 		osx_chsh { $::luser:
 			shell   => '/opt/boxen/homebrew/bin/zsh',
@@ -156,6 +156,12 @@ class people::grahamgilbert::config (
 			domain	=> 'com.apple.DiskUtility',
 			key		=> 'DUDebugMenuEnabled',
 			value	=> 1,
+		}
+		
+		boxen::oxs_defaults {'Four finger trackpad swipe':
+			domain => 'com.apple.driver.AppleBluetoothMultitouch.trackpad',
+			key    => 'TrackpadFourFingerVertSwipeGesture',
+			vlaue  => 2,
 		}
 		
 		##hide away from meraki
