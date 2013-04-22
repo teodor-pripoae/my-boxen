@@ -164,7 +164,7 @@ class people::grahamgilbert::config (
 			value	=> 1,
 		}
 		
-		boxen::oxs_defaults {'Four finger trackpad swipe':
+		boxen::osx_defaults {'Four finger trackpad swipe':
 			domain => 'com.apple.driver.AppleBluetoothMultitouch.trackpad',
 			key    => 'TrackpadFourFingerVertSwipeGesture',
 			vlaue  => 2,
