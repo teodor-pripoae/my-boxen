@@ -14,6 +14,11 @@ class people::grahamgilbert::gems (
 		ruby => '1.9.3',
 	}
 	
+	ruby::gem { 'librarian-puppet for 1.9.3':
+		gem  => 'librarian-puppet',
+		ruby => '1.9.3',
+	}
+	
 	ruby::gem { 'rspec-puppet for 1.9.3':
 		gem  => 'rspec-puppet',
 		ruby => '1.9.3',
