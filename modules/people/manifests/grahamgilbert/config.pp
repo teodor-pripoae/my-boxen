@@ -3,6 +3,12 @@ class people::grahamgilbert::config (
   	$my_sourcedir = $::people::grahamgilbert::params::my_sourcedir,
   	$my_username  = $::people::grahamgilbert::params::my_username
 	){	
+
+        include osx::global::expand_save_dialog
+        include osx::universal_access::ctrl_mod_zoom
+        include osx::disable_app_quarantine
+        include osx::finder::unhide_library
+		
 		# Set the default ruby
 		
 		class { 'ruby::global': version => '1.9.3' }
