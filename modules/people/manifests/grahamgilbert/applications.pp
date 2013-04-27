@@ -13,7 +13,7 @@ class people::grahamgilbert::applications {
 	include chocolat
 	include crashplan
 	include virtualbox
-	#include colloquy
+	include pathfinder
 	include caffeine
 	include alfred2
 	include xquartz
