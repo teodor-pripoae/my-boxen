@@ -3,7 +3,7 @@ class projects::crypt_server (
   	$my_sourcedir = $people::grahamgilbert::params::my_sourcedir,
   	$my_username  = $people::grahamgilbert::params::my_username
 	){
-	include python
+	#include python
 	
 	boxen::project { 'crypt-server':
 		dir		=>	"${my_sourcedir}/Mine/crypt-server",
