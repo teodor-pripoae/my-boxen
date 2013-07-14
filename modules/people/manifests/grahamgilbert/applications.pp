@@ -49,6 +49,11 @@ class people::grahamgilbert::applications {
   		source  => 'http://www.macbartender.com/Demo/Bartender.zip',
   		provider    => compressed_app,
   	}
+    
+    package { 'Pacifist':
+        source   => 'http://www.charlessoft.com/pacifist_download/Pacifist_3.0.10.dmg',
+        provider => appdmg,
+    }
   	
   	package { 'Transmit':
   		source      => 'http://www.panic.com/transmit/d/Transmit%204.3.2.zip',
