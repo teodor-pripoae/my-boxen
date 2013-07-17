@@ -7,7 +7,7 @@ class projects::crankpkg (
 	
 	
 	boxen::project { 'crankpkg':
-		dir		=>	"${my_sourcedir}/Mine/CrankPkg",
+		dir		=>	"${my_sourcedir}/Mine/buildCrankPkg",
 		source	=>	'grahamgilbert/CrankPkg',
 		#ruby	=>	'1.9.3-p392',
 	}
