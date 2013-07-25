@@ -15,7 +15,7 @@ GIT
 GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
-    boxen (2.1.0)
+    boxen (2.3.6)
 
 GITHUBTARBALL
   remote: boxen/puppet-caffeine
@@ -56,6 +56,11 @@ GITHUBTARBALL
   remote: boxen/puppet-git
   specs:
     git (1.2.2)
+
+GITHUBTARBALL
+  remote: boxen/puppet-googledrive
+  specs:
+    googledrive (1.0.2)
 
 GITHUBTARBALL
   remote: boxen/puppet-homebrew
@@ -100,7 +105,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-osx
   specs:
-    osx (1.1.0)
+    osx (1.5.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-repository
@@ -180,7 +185,7 @@ GITHUBTARBALL
 DEPENDENCIES
   alfred2 (= 0.0.1)
   appcleaner (= 1.0.0)
-  boxen (= 2.1.0)
+  boxen (= 2.3.6)
   caffeine (= 1.0.0)
   chocolat (= 1.0.2)
   chrome (= 1.1.0)
@@ -190,6 +195,7 @@ DEPENDENCIES
   dropbox (= 1.1.0)
   gcc (= 1.0.0)
   git (= 1.2.2)
+  googledrive (= 1.0.2)
   homebrew (= 1.1.2)
   hub (= 1.0.0)
   inifile (= 0.9.0)
@@ -201,7 +207,7 @@ DEPENDENCIES
   nvm (= 1.0.0)
   omnigraffle (= 1.2.0)
   onepassword (= 1.0.0)
-  osx (= 1.1.0)
+  osx (= 1.5.0)
   pathfinder (>= 0)
   repository (= 1.0.0)
   ruby (= 3.5.0)

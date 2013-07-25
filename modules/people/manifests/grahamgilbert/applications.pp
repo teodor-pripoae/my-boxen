@@ -12,6 +12,7 @@ class people::grahamgilbert::applications {
 	include dropbox
 	include iterm2::dev
 	include chocolat
+    include googledrive
 	include crashplan
 	include virtualbox
 	include pathfinder
