@@ -88,6 +88,11 @@ GITHUBTARBALL
     nvm (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-omnigraffle
+  specs:
+    omnigraffle (1.2.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-onepassword
   specs:
     onepassword (1.0.0)
@@ -194,6 +199,7 @@ DEPENDENCIES
   nginx (= 1.3.0)
   nodejs (= 2.1.0)
   nvm (= 1.0.0)
+  omnigraffle (= 1.2.0)
   onepassword (= 1.0.0)
   osx (= 1.1.0)
   pathfinder (>= 0)
