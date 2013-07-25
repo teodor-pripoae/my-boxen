@@ -8,6 +8,7 @@ class people::grahamgilbert::applications {
 	include chrome
 	include appcleaner
 	include onepassword
+    include omnigraffle
 	include dropbox
 	include iterm2::dev
 	include chocolat
