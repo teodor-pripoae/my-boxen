@@ -95,6 +95,11 @@ class people::grahamgilbert::applications {
     	source	 => "http://unetbootin.sourceforge.net/unetbootin-mac-latest.zip",
     	provider => compressed_app,
     }
+    
+    package { 'lingonx':
+        source   => "http://www.peterborgapps.com/downloads/LingonX.zip",
+        provider => compressed_app,
+    }
 	
     package { 'Grand Perspective':
     	source	 => "http://downloads.sourceforge.net/project/grandperspectiv/grandperspective/1.5.1/GrandPerspective-1_5_1.dmg",
