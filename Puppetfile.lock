@@ -5,13 +5,6 @@ GIT
   specs:
     istatmenus4 (0.0.1)
 
-GIT
-  remote: https://github.com/bradhouse/puppet-pathfinder.git
-  ref: master
-  sha: 625162a83a2f78e2e176b656e5456c6d300e4b92
-  specs:
-    pathfinder (0.0.1)
-
 GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
@@ -208,7 +201,6 @@ DEPENDENCIES
   omnigraffle (= 1.2.0)
   onepassword (= 1.0.0)
   osx (= 1.5.0)
-  pathfinder (>= 0)
   repository (= 1.0.0)
   ruby (= 3.5.0)
   stdlib (= 3.2.0)
