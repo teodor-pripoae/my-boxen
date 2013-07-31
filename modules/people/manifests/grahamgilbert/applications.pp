@@ -107,7 +107,7 @@ class people::grahamgilbert::applications {
     }
     
     package { 'SuperDuper!':
-        source   => 'http://www.shirt-pocket.com/mint/pepper/orderedlist/downloads/download.php?file=http%3A//www.shirt-pocket.com/downloads/SuperDuper%21.dmg'
+        source   => 'http://www.shirt-pocket.com/mint/pepper/orderedlist/downloads/download.php?file=http%3A//www.shirt-pocket.com/downloads/SuperDuper%21.dmg',
         provider => appdmg,
     }
 }
