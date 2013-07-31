@@ -104,4 +104,9 @@ class people::grahamgilbert::applications {
     	source	 => "http://downloads.sourceforge.net/project/grandperspectiv/grandperspective/1.5.1/GrandPerspective-1_5_1.dmg",
     	provider => appdmg,
     }
+    
+    package { 'SuperDuper!':
+        source   => 'http://www.shirt-pocket.com/mint/pepper/orderedlist/downloads/download.php?file=http%3A//www.shirt-pocket.com/downloads/SuperDuper%21.dmg'
+        provider => appdmg,
+    }
 }
