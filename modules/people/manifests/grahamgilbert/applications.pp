@@ -21,6 +21,7 @@ class people::grahamgilbert::applications {
 	include vmware_fusion
 	include textmate::textmate2::release
     include textwrangler
+    include sequel_pro
 
 	package{ 'zsh': }
 	package{ 'htop-osx': }
