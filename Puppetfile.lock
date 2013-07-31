@@ -119,6 +119,11 @@ GITHUBTARBALL
     ruby (6.2.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-sequel_pro
+  specs:
+    sequel_pro (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-sudo
   specs:
     sudo (1.0.0)
@@ -213,6 +218,7 @@ DEPENDENCIES
   osx (= 1.5.0)
   repository (= 2.2.0)
   ruby (= 6.2.0)
+  sequel_pro (= 1.0.0)
   stdlib (= 4.1.0)
   sudo (= 1.0.0)
   textmate (= 1.1.0)
