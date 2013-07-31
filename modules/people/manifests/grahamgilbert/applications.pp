@@ -15,7 +15,6 @@ class people::grahamgilbert::applications {
     include googledrive
 	include crashplan
 	include virtualbox
-	include pathfinder
 	include caffeine
 	include alfred2
 	include xquartz
