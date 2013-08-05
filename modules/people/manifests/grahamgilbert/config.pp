@@ -28,6 +28,13 @@ class people::grahamgilbert::config (
 				ensure => directory,
 			}
 		}
+            
+        # Config the luggage
+		file { "/usr/local/share/luggage/luggage.local":
+            ensure  => link,
+            target  => "${my_sourcedir}/Mine/luggage_local/luggage.local",
+            require => Repository['luggage_local']
+        }
 		
 		# TextMate
 		
@@ -49,7 +56,7 @@ class people::grahamgilbert::config (
 			ensure => directory,
 		} */
 		
-		 file { "/Users/${::luser}/Library/Application Support/TextMate/Managed/Bundles/Puppet.tmbundle":
+		file { "/Users/${::luser}/Library/Application Support/TextMate/Managed/Bundles/Puppet.tmbundle":
 			ensure  => link,
 			target  => "${my_sourcedir}/Others/puppet-textmate-bundle",
 			require => Repository['puppet-textmate-bundle']
