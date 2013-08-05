@@ -33,7 +33,7 @@ class people::grahamgilbert::config (
 		file { "/usr/local/share/luggage/luggage.local":
             ensure  => link,
             target  => "${my_sourcedir}/Mine/luggage_local/luggage.local",
-            require => Repository['luggage_local']
+            require => Boxen::Project['luggage_local']
         }
 		
 		# TextMate
