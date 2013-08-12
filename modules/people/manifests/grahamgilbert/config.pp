@@ -142,6 +142,16 @@ class people::grahamgilbert::config (
 			#type	=> 'BOOL',
 			value	=> 'YES',
 		}
+            
+        boxen::osx_defaults {
+            'Prevent Time Machine from prompting to use new hard drives as backup volume':
+              ensure => present,
+              key    => 'DoNotOfferNewDisksForBackup',
+              domain => 'com.apple.TimeMachine',
+              value  => 'true',
+              type   => 'bool',
+              user   => $::boxen_user;
+        }
 		
 		boxen::osx_defaults { 'Make Go2Shell Use iTerm':
 			domain	=> 'com.alice.mac.go2shell',
