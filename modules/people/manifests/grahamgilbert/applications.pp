@@ -22,6 +22,7 @@ class people::grahamgilbert::applications {
 	include textmate::textmate2::release
     include textwrangler
     include sequel_pro
+    include steam
 
 	package{ 'zsh': }
 	package{ 'htop-osx': }
