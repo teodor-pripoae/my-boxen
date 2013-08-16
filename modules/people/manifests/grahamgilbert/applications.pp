@@ -29,7 +29,7 @@ class people::grahamgilbert::applications {
     package{ 'graphviz': }
 	include vagrant
         
-    class {'packer:'
+    class {'packer':
         version => '0.3.1',
     }
 	
