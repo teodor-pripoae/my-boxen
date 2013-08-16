@@ -28,6 +28,10 @@ class people::grahamgilbert::applications {
 	package{ 'tree': }
     package{ 'graphviz': }
 	include vagrant
+        
+    class {'packer:'
+        version => '0.3.1',
+    }
 	
 	vagrant::plugin { 'vagrant-vmware-fusion':
 	  license => "/Users/${::luser}/Dropbox/Software/Vagrant/fusion-license.lic",
