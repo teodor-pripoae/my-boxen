@@ -124,6 +124,11 @@ GITHUBTARBALL
     sequel_pro (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-steam
+  specs:
+    steam (1.0.1)
+
+GITHUBTARBALL
   remote: boxen/puppet-sudo
   specs:
     sudo (1.0.0)
@@ -222,6 +227,7 @@ DEPENDENCIES
   ruby (= 6.3.0)
   sequel_pro (= 1.0.0)
   stdlib (= 4.1.0)
+  steam (= 1.0.1)
   sudo (= 1.0.0)
   textmate (= 1.1.0)
   textwrangler (= 1.0.1)
