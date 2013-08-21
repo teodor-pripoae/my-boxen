@@ -115,4 +115,9 @@ class people::grahamgilbert::applications {
         source   => 'http://www.shirt-pocket.com/mint/pepper/orderedlist/downloads/download.php?file=http%3A//www.shirt-pocket.com/downloads/SuperDuper%21.dmg',
         provider => appdmg_eula,
     }
+        
+    package { 'Filewave Lightning':
+        source => 'http://downloads.filewave.com/lightning/FileWave_Lightning-1.1.dmg',
+        provider => appdmg,
+    }
 }
