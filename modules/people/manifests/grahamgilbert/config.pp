@@ -35,6 +35,20 @@ class people::grahamgilbert::config (
             target  => "${my_sourcedir}/Mine/luggage_local/luggage.local",
             require => Boxen::Project['luggage_local']
         }
+        
+        
+        # CocoaPython Template for Xcode
+		repository { 'Xcode4CocoaPythonTemplates':
+			source => 'gregneagle/Xcode4CocoaPythonTemplates',
+			path   => "${my_sourcedir}/Others/Xcode4CocoaPythonTemplates",
+			require => File["${my_sourcedir}/Others"],
+		}
+        
+		file { "/Users/${::luser}/Library/Developer/Xcode/Templates":
+			ensure  => link,
+			target  => "${my_sourcedir}/Others/Xcode4CocoaPythonTemplates",
+			require => Repository['Xcode4CocoaPythonTemplates']
+		} 
 		
 		# TextMate
 		
