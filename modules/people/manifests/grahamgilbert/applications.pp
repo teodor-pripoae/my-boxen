@@ -117,7 +117,12 @@ class people::grahamgilbert::applications {
     }
         
     package { 'Filewave Lightning':
-        source => 'http://downloads.filewave.com/lightning/FileWave_Lightning-1.1.dmg',
+        source   => 'http://downloads.filewave.com/lightning/FileWave_Lightning-1.1.dmg',
+        provider => appdmg,
+    }
+    
+    package {'Audacity':
+        source   => 'http://audacity.googlecode.com/files/audacity-macosx-ub-2.0.3.dmg',
         provider => appdmg,
     }
 }
