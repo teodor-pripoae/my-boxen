@@ -23,6 +23,6 @@ class projects::autopkg (
     exec {'install autopkg server deamon':
         command => "${my_sourcedir}/Others/autopkg/Scripts/install.sh",
         creates => '/Library/LaunchDaemons/com.github.autopkg.autopkgserver.plist',
-        requires => Boxen::Project['autopkg'],
+        require => Boxen::Project['autopkg'],
     }
 }
