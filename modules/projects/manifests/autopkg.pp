@@ -19,4 +19,10 @@ class projects::autopkg (
 		  key    => 'MUNKI_REPO',
 		  value  => '/Volumes/munki.pebbleit.com',
 	}
+    
+    exec {'install autopkg server deamon':
+        command => "${my_sourcedir}/Others/autopkg/Scripts/install.sh",
+        creates => '/Library/LaunchDaemons/com.github.autopkg.autopkgserver.plist',
+        requires => Boxen::Project['autopkg'],
+    }
 }
