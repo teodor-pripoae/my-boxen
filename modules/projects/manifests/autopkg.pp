@@ -24,5 +24,6 @@ class projects::autopkg (
         command => "${my_sourcedir}/Others/autopkg/Scripts/install.sh",
         creates => '/Library/LaunchDaemons/com.github.autopkg.autopkgserver.plist',
         require => Boxen::Project['autopkg'],
+        user    => root,
     }
 }
