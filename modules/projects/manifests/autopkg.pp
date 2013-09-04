@@ -25,5 +25,6 @@ class projects::autopkg (
         creates => '/Library/LaunchDaemons/com.github.autopkg.autopkgserver.plist',
         require => Boxen::Project['autopkg'],
         user    => root,
+        cwd     => "${my_sourcedir}/Others/autopkg",
     }
 }
