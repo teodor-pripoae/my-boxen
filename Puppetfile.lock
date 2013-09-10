@@ -6,7 +6,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
-    boxen (3.0.1)
+    boxen (3.0.2)
 
 GITHUBTARBALL
   remote: boxen/puppet-caffeine
@@ -116,7 +116,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-ruby
   specs:
-    ruby (6.3.0)
+    ruby (6.3.4)
 
 GITHUBTARBALL
   remote: boxen/puppet-sequel_pro
@@ -146,7 +146,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-vagrant
   specs:
-    vagrant (2.0.2)
+    vagrant (2.0.10)
 
 GITHUBTARBALL
   remote: boxen/puppet-virtualbox
@@ -197,7 +197,7 @@ DEPENDENCIES
   alfred2 (= 0.0.1)
   appcleaner (= 1.0.0)
   autoconf (= 1.0.0)
-  boxen (= 3.0.1)
+  boxen (= 3.0.2)
   caffeine (= 1.0.0)
   chocolat (= 1.0.2)
   chrome (= 1.1.0)
@@ -224,14 +224,14 @@ DEPENDENCIES
   packer (= 1.0.2)
   repository (= 2.2.0)
   repository (= 2.2.0)
-  ruby (= 6.3.0)
+  ruby (= 6.3.4)
   sequel_pro (= 1.0.0)
   stdlib (= 4.1.0)
   steam (= 1.0.1)
   sudo (= 1.0.0)
   textmate (= 1.1.0)
   textwrangler (= 1.0.1)
-  vagrant (= 2.0.2)
+  vagrant (= 2.0.10)
   virtualbox (= 1.0.2)
   vmware_fusion (= 1.0.0)
   xquartz (= 1.1.0)

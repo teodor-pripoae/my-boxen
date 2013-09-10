@@ -30,9 +30,12 @@ class people::grahamgilbert::applications {
     package{ 'graphviz': }
 	include vagrant
         
-    # class {'packer':
-    #     version => '0.3.1',
-    # }
+    # homebrew::tap { 'homebrew/binary': }
+    
+    package {'packer':
+        ensure  => latest,
+        require => Homebrew::Tap['homebrew/binary'],
+    }
 	
 	vagrant::plugin { 'vagrant-vmware-fusion':
 	  license => "/Users/${::luser}/Dropbox/Software/Vagrant/fusion-license.lic",
@@ -118,11 +121,6 @@ class people::grahamgilbert::applications {
         
     package { 'Filewave Lightning':
         source   => 'http://downloads.filewave.com/lightning/FileWave_Lightning-1.1.dmg',
-        provider => appdmg,
-    }
-    
-    package {'Audacity':
-        source   => 'http://audacity.googlecode.com/files/audacity-macosx-ub-2.0.3.dmg',
         provider => appdmg,
     }
 }

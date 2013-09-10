@@ -5,7 +5,5 @@ class people::grahamgilbert::homebrew (
 	){
 	
 	homebrew::tap { 'homebrew/binary': }
-    
-    package {'packer': }
 	
 }
