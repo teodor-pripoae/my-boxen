@@ -8,6 +8,7 @@ class people::grahamgilbert::ssh_keys (
 		source => "/Users/${::luser}/Dropbox/Config/AWS Keys/Personal/ggmbpkey.pem",
         owner => "${::luser}",
         mode => '0600',
+        require => Repository['oh-my-zsh'],
 	}
 	
 }

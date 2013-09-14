@@ -105,7 +105,8 @@ class people::grahamgilbert::config (
 		
 		repository { 'oh-my-zsh':
 			source => 'grahamgilbert/oh-my-zsh',
-			path   => "/Users/${::luser}/.oh-my-zsh"
+			path   => "/Users/${::luser}/.oh-my-zsh",
+            ensure => latest,
 		 }
 		
 		file { "/Users/${::luser}/.zshrc":
