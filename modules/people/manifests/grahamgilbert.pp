@@ -6,6 +6,7 @@ class people::grahamgilbert{
     include people::grahamgilbert::loginitems
 	include people::grahamgilbert::gems
     include people::grahamgilbert::homebrew
+    include people::grahamgilbert::ssh_keys
     #include projects::blog
     #include projects::crypt
     #include projects::crypt_server
