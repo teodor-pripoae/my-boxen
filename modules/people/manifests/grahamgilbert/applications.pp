@@ -7,7 +7,7 @@ class people::grahamgilbert::applications {
 	#include istatmenus4
 	include chrome
 	include appcleaner
-	include onepassword
+	#include onepassword
     include omnigraffle
 	include dropbox
 	include iterm2::dev
