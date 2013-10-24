@@ -53,7 +53,7 @@ class people::grahamgilbert::config (
 		# TextMate
 		
 		repository { 'puppet-textmate-bundle':
-			source => 'masterzen/puppet-textmate-bundle',
+			source => 'puppet-textmmate-bundle/puppet-textmate-bundle',
 			path   => "${my_sourcedir}/Others/puppet-textmate-bundle",
 			require => File["${my_sourcedir}/Others"],
 		}
