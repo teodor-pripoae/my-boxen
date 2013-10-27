@@ -23,6 +23,7 @@ class people::grahamgilbert::applications {
     include textwrangler
     include sequel_pro
     include steam
+    include vlc
 
 	package{ 'zsh': }
 	package{ 'htop-osx': }
