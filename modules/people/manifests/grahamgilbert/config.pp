@@ -72,6 +72,7 @@ class people::grahamgilbert::config (
 		
 		file { "/Users/${::luser}/Library/Application Support/TextMate/Managed/Bundles/Puppet.tmbundle":
 			ensure  => link,
+            force   => true,
 			target  => "${my_sourcedir}/Others/puppet-textmate-bundle",
 			require => Repository['puppet-textmate-bundle']
 		} 
