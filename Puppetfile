@@ -36,12 +36,11 @@ github "xquartz",    "1.1.0"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
-github "osx",	"1.5.0"
+github "osx",	"2.0.0"
 github "repository", "2.2.0"
 github "iterm2", "1.0.2"
 github "chrome", "1.1.0"
-github "onepassword", "1.0.0"
-github "dropbox", "1.1.0"
+github "dropbox", "1.1.2"
 github "chocolat", "1.0.2"
 github "dockutil",	"0.1.2",	:repo => "grahamgilbert/puppet-dockutil"
 github "virtualbox", "1.0.2"
