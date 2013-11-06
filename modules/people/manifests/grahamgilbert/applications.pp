@@ -11,7 +11,7 @@ class people::grahamgilbert::applications {
     #include omnigraffle
 	include dropbox
 	include iterm2::dev
-	include chocolat
+	# include chocolat
     include googledrive
 	include crashplan
 	include virtualbox
