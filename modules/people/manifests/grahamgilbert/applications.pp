@@ -8,7 +8,7 @@ class people::grahamgilbert::applications {
 	include chrome
 	include appcleaner
 	#include onepassword
-    include omnigraffle
+    #include omnigraffle
 	include dropbox
 	include iterm2::dev
 	include chocolat
@@ -123,5 +123,10 @@ class people::grahamgilbert::applications {
     package { 'Filewave Lightning':
         source   => 'http://downloads.filewave.com/lightning/FileWave_Lightning-1.1.dmg',
         provider => appdmg,
+    }
+    
+    package {'Omnigraffle':
+        provider => appdmg_eula,
+        source   => 'http://www.omnigroup.com/ftp/pub/software/MacOSX/10.6/OmniGraffle-5.4.4.dmg',
     }
 }
