@@ -179,8 +179,8 @@ class people::grahamgilbert::config (
 		boxen::osx_defaults { 'Show time connected in the VPN menubar item':
             domain => 'com.apple.networkConnect',
             key    => 'VPNShowTime',
-            type   => 'BOOL',
-            value  => 'YES',
+            type   => 'bool',
+            value  => 'true',
         }
 		
 		#boxen::osx_defaults { 'Stop iTerm nagging about quitting':
