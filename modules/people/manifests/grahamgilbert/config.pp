@@ -176,12 +176,12 @@ class people::grahamgilbert::config (
 			value	=> '2',
 		}
 		
-		#boxen::osx_defaults { 'iTerm stays open when all windows are shut':
-		#	domain	=> 'com.googlecode.iterm2',
-		#	key		=> 'QuitWhenAllWindowsClosed',
-			#type	=> 'BOOL',
-		#	value	=> 'NO',
-		#}
+		boxen::osx_defaults { 'Show time connected in the VPN menubar item':
+            domain => 'com.apple.networkConnect',
+            key    => 'VPNShowTime',
+            type   => 'BOOL',
+            value  => 'YES',
+        }
 		
 		#boxen::osx_defaults { 'Stop iTerm nagging about quitting':
 		#	domain	=> 'com.googlecode.iterm2',
