@@ -8,7 +8,7 @@ class people::grahamgilbert::loginitems (
 		name => 'Alfred 2',
 		path => '/Applications/Alfred 2.app',
 		hidden => true,
-		require => Class['alfred2'],
+		require => Class['alfred'],
 	}
 		
 		

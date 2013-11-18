@@ -16,7 +16,7 @@ class people::grahamgilbert::applications {
 	include crashplan
 	include virtualbox
 	include caffeine
-	include alfred2
+	include alfred
 	include xquartz
 	include vmware_fusion
 	include textmate::textmate2::release
