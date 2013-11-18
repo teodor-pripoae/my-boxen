@@ -10,5 +10,17 @@ class people::grahamgilbert::ssh_keys (
         mode => '0600',
         require => Repository['oh-my-zsh'],
 	}
+    
+	file { "/Users/${::luser}/.ssh/id_rsa":
+		source => "/Users/${::luser}/Dropbox/Config/SSH Keys/id_rsa",
+        owner => "${::luser}",
+        mode => '0600',
+	}
+    
+	file { "/Users/${::luser}/.ssh/id_rsa.pub":
+		source => "/Users/${::luser}/Dropbox/Config/SSH Keys/id_rsa.pub",
+        owner => "${::luser}",
+        mode => '0644',
+	}
 	
 }
