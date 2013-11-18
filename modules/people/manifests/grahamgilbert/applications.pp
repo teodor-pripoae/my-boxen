@@ -88,7 +88,7 @@ class people::grahamgilbert::applications {
     }
     
     ##install Meraki Systems Manager on the home machine
-    if ($::hostname == "Loki") or ($::hostname == "Yoda"){
+    if ($::hostname == "Loki") or ($::hostname == "Yoda") or ($::hostname == "Artoo"){
         package { 'Meraki Systems Manager':
             source   =>  "/Users/${::luser}/Dropbox/Software/Home Meraki/MerakiSM-Agent-systems-manager.dmg",
             provider => pkgdmg,
