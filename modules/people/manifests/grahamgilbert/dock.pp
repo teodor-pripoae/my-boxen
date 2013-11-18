@@ -148,5 +148,17 @@ class people::grahamgilbert::dock (
         item   => "/Applications/iPhoto.app",
         label  => "iPhoto",
         action => "remove",
-    }   
+    }
+    
+    dockutil::item { 'Remove Maps':
+        item   => "/Applications/Maps.app",
+        label  => "Maps",
+        action => "remove",
+    }
+    
+    dockutil::item { 'Remove iBooks':
+        item   => "/Applications/iBooks.app",
+        label  => "iBooks",
+        action => "remove",
+    }
 }
