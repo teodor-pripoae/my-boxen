@@ -23,4 +23,8 @@ class people::grahamgilbert::ssh_keys (
         mode => '0644',
 	}
 	
+	file { "/Users/${::luser}/.ssh":
+		ensure => directory,
+	}
+	
 }
