@@ -38,7 +38,7 @@ class people::grahamgilbert::applications {
     }
 	
 	vagrant::plugin { 'vagrant-vmware-fusion':
-	  license => "/Users/${::luser}/Dropbox/Software/Vagrant/fusion-license.lic",
+	  license => "/Users/${::luser}/Dropbox/Config/Vagrant/fusion-6-license.lic",
 	}
 
 	package { 'Github for Mac':
