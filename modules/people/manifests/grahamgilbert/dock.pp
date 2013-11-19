@@ -43,18 +43,25 @@ class people::grahamgilbert::dock (
         position => 5,
         action   => "add",
     }
+	
+    dockutil::item { 'VMWare':
+        item     => "/Applications/VMware Fusion.app",
+        label    => "VMware Fusion",
+        position => 6,
+        action   => "add",
+    }
         
     dockutil::item { 'Gitbox':
         item     => "/Applications/Gitbox.app",
         label    => "Gitbox",
-        position => 6,
+        position => 7,
         action   => "add",
     }
     
     dockutil::item { 'GitHub':
         item     => "/Applications/GitHub.app",
         label    => "GitHub",
-        position => 7,
+        position => 8,
         action   => "add",
         require  => Package['Github for Mac'],
     }
