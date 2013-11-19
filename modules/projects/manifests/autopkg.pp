@@ -17,7 +17,7 @@ class projects::autopkg (
 		  ensure => present,
 		  domain => 'com.github.autopkg',
 		  key    => 'MUNKI_REPO',
-		  value  => '/Volumes/munki.pebbleit.com',
+		  value  => '/Volumes/Munki',
 	}
     
     exec {'install autopkg server deamon':
