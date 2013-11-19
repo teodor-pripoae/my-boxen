@@ -169,6 +169,11 @@ GITHUBTARBALL
     xquartz (1.1.0)
 
 GITHUBTARBALL
+  remote: grahamgilbert/puppet-autodmg
+  specs:
+    autodmg (0.0.1)
+
+GITHUBTARBALL
   remote: grahamgilbert/puppet-dockutil
   specs:
     dockutil (0.1.2)
@@ -197,6 +202,7 @@ DEPENDENCIES
   alfred (= 1.1.7)
   appcleaner (= 1.0.0)
   autoconf (= 1.0.0)
+  autodmg (= 0.0.1)
   boxen (= 3.0.2)
   caffeine (= 1.0.0)
   chocolat (= 1.0.2)
