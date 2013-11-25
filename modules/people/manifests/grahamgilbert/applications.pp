@@ -133,6 +133,6 @@ class people::grahamgilbert::applications {
 	
 	package {'Xmarks':
 		provider => 'pkgdmg',
-		source   => 'https://static.xmarks.com/clients/safari/xmarks_for_safari_1.4.3.dmg'
+		source   => 'https://rodan.lastpass.com/dev/xmarks_for_safari_1.5.6.dmg'
 	}
 }
