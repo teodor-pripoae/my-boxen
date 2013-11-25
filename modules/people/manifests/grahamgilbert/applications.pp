@@ -135,4 +135,9 @@ class people::grahamgilbert::applications {
 		provider => 'pkgdmg',
 		source   => 'https://rodan.lastpass.com/dev/xmarks_for_safari_1.5.6.dmg'
 	}
+	
+	package {'Adobe Flash':
+		provider => 'pkgdmg',
+		source   => 'http://fpdownload.macromedia.com/get/flashplayer/current/licensing/mac/install_flash_player_11_osx_pkg.dmg',
+	}
 }
