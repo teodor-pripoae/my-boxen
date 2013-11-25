@@ -130,4 +130,9 @@ class people::grahamgilbert::applications {
         provider => appdmg_eula,
         source   => 'http://www.omnigroup.com/ftp/pub/software/MacOSX/10.6/OmniGraffle-5.4.4.dmg',
     }
+	
+	package {'Xmarks':
+		provider => 'pkgdmg',
+		source   => 'https://static.xmarks.com/clients/safari/xmarks_for_safari_1.4.3.dmg'
+	}
 }
