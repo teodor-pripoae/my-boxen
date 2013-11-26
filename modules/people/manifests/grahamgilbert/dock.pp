@@ -6,13 +6,13 @@ class people::grahamgilbert::dock (
 
     include dockutil
 
-    dockutil::item { 'add chrome':
-        item     => "/Applications/Google Chrome.app",
-        label    => "Google Chrome",
-        position => 1,
-        action   => "add",
-        require  => Class['chrome'],
-    }
+    # dockutil::item { 'add chrome':
+    #     item     => "/Applications/Google Chrome.app",
+    #     label    => "Google Chrome",
+    #     position => 1,
+    #     action   => "add",
+    #     require  => Class['chrome'],
+    # }
     
     dockutil::item { 'Add iTerm':
         item     => "/Applications/iTerm.app",
