@@ -141,4 +141,9 @@ class people::grahamgilbert::applications {
 		provider => 'pkgdmg',
 		source   => 'http://fpdownload.macromedia.com/get/flashplayer/current/licensing/mac/install_flash_player_11_osx_pkg.dmg',
 	}
+    
+    package { 'Google Voice and Video':
+        provider => 'pkgdmg',
+        source   => 'https://dl.google.com/googletalk/googletalkplugin/GoogleVoiceAndVideoSetup.dmg',
+    }
 }
