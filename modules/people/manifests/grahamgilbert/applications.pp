@@ -12,6 +12,7 @@ class people::grahamgilbert::applications {
 	include iterm2::dev
 	# include chocolat
     include googledrive
+    include google_notifier
 	include crashplan
 	include virtualbox
 	include caffeine
