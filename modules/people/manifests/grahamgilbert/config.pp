@@ -213,4 +213,26 @@ class people::grahamgilbert::config (
 			ensure	=> present,
 			source	=>	'puppet:///modules/people/grahamgilbert/ci.conf',
 		}
+        
+        # Install the ksdiff tool
+        
+        file {'/usr/local':
+            ensure => 'directory',
+            owner  => 0,
+            group  => 0,
+        }
+        
+        file {'/usr/local/bin':
+            ensure => 'directory',
+            owner  => 0,
+            group  => 0,
+        }
+        
+        file {'/usr/local/bin/ksdiff':
+            owner   => 0,
+            group   => 0,
+            mode    => '0755',
+            source  => '/Applications/Kaleidoscope.app/Contents/Resources/bin/ksdiff',
+            require => [File['/usr/local/bin'],Package['Kaleidoscope']],
+        }
 }
