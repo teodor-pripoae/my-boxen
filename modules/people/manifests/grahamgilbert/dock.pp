@@ -14,6 +14,14 @@ class people::grahamgilbert::dock (
     #     require  => Class['chrome'],
     # }
     
+    dockutil::item { 'add Safari':
+        item     => "/Applications/Safari.app",
+        label    => "Safari",
+        position => 1,
+        action   => "add",
+        # require  => Class['chrome'],
+    }
+    
     dockutil::item { 'Add iTerm':
         item     => "/Applications/iTerm.app",
         label    => "iTerm",
