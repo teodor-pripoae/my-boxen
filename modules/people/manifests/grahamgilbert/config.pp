@@ -28,6 +28,14 @@ class people::grahamgilbert::config (
 				ensure => directory,
 			}
 		}
+        
+        # Stop Preview re-opening documents
+		boxen::osx_defaults { 'Stop Preview re-opening documents':
+			  ensure => present,
+			  domain => 'com.apple.Preview',
+			  key    => 'NSQuitAlwaysKeepsWindows',
+			  value  => 'NO',
+		}
             
         # Config the luggage
 		file { "/usr/local/share/luggage/luggage.local":
