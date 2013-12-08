@@ -36,6 +36,13 @@ class people::grahamgilbert::config (
 			  key    => 'NSQuitAlwaysKeepsWindows',
 			  value  => 'NO',
 		}
+        
+        boxen::osx_defaults { 'Copy text from QuickLook':
+            ensure => present,
+            domain => 'com.apple.finder',
+            key    => 'QLEnableTextSelection',
+            value  => 'YES',
+        }
             
         # Config the luggage
 		file { "/usr/local/share/luggage/luggage.local":
