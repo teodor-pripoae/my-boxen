@@ -11,6 +11,13 @@ class people::grahamgilbert::ssh_keys (
         require => Repository['oh-my-zsh'],
 	}
     
+	file { "/Users/${::luser}/.ssh/pebble.pem":
+		source => "/Users/${::luser}/Dropbox/Config/AWS Keys/Work/pebble.pem",
+        owner => "${::luser}",
+        mode => '0600',
+        require => Repository['oh-my-zsh'],
+	}
+    
 	file { "/Users/${::luser}/.ssh/id_rsa":
 		source => "/Users/${::luser}/Dropbox/Config/SSH Keys/id_rsa",
         owner => "${::luser}",
