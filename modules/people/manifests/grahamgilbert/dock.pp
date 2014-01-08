@@ -6,21 +6,21 @@ class people::grahamgilbert::dock (
 
     include dockutil
 
-    # dockutil::item { 'add chrome':
-    #     item     => "/Applications/Google Chrome.app",
-    #     label    => "Google Chrome",
-    #     position => 1,
-    #     action   => "add",
-    #     require  => Class['chrome'],
-    # }
-    
-    dockutil::item { 'add Safari':
-        item     => "/Applications/Safari.app",
-        label    => "Safari",
+    dockutil::item { 'add chrome':
+        item     => "/Applications/Google Chrome.app",
+        label    => "Google Chrome",
         position => 1,
         action   => "add",
-        # require  => Class['chrome'],
+        require  => Class['chrome'],
     }
+    
+    # dockutil::item { 'add Safari':
+    #     item     => "/Applications/Safari.app",
+    #     label    => "Safari",
+    #     position => 1,
+    #     action   => "add",
+    #     # require  => Class['chrome'],
+    # }
     
     dockutil::item { 'Add iTerm':
         item     => "/Applications/iTerm.app",
@@ -87,11 +87,11 @@ class people::grahamgilbert::dock (
         action => "remove",
     }
     
-    # dockutil::item { 'Remove Safari':
-    #     item   => "/Applications/Safari.app",
-    #     label  => "Safari",
-    #     action => "remove",
-    # }
+    dockutil::item { 'Remove Safari':
+        item   => "/Applications/Safari.app",
+        label  => "Safari",
+        action => "remove",
+    }
     
     dockutil::item { 'Remove Mail':
         item   => "/Applications/Mail.app",
