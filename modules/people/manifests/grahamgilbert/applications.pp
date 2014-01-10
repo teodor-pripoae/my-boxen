@@ -17,6 +17,7 @@ class people::grahamgilbert::applications {
 	include virtualbox
 	include caffeine
 	include alfred
+    include firefox
 	include xquartz
 	include vmware_fusion
 	include textmate::textmate2::release
