@@ -25,6 +25,7 @@ class people::grahamgilbert::applications {
     include sequel_pro
     include steam
     include vlc
+    include teamviewer
 
 	package{ 'zsh': }
 	package{ 'htop-osx': }
