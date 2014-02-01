@@ -14,6 +14,7 @@ class people::grahamgilbert::applications {
     include googledrive
     include google_notifier
 	include crashplan
+    include handbrake
 	include virtualbox
 	include caffeine
 	include alfred
