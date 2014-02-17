@@ -11,7 +11,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
-    boxen (3.0.2)
+    boxen (2.3.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-caffeine
@@ -223,7 +223,7 @@ DEPENDENCIES
   appcleaner (= 1.0.0)
   autoconf (= 1.0.0)
   autodmg (= 0.0.1)
-  boxen (= 3.0.2)
+  boxen (= 2.3.0)
   caffeine (= 1.0.0)
   chocolat (= 1.0.2)
   chrome (= 1.1.0)
