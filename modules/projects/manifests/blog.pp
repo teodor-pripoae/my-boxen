@@ -11,4 +11,10 @@ class projects::blog (
 		source	=>	'grahamgilbert/blog',
 		#ruby	=>	'1.9.3-p392',
 	}
+    
+    # boxen::project { 'blog-deploy':
+    #     dir        =>    "${my_sourcedir}/Mine/blog/_deploy",
+    #     source    =>    'grahamgilbert/grahamgilbert.github.io',
+    #     require =>  Boxen::Project['blog'],
+    # }
 }
