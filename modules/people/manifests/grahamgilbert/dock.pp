@@ -39,13 +39,14 @@ class people::grahamgilbert::dock (
     }
 
     dockutil::item { 'Tweetbot':
-        item     => "/Applications/Tweetbot.app",
-        label    => "Tweetbot",
+        item     => "/Users/${::luser}/Dropbox/Config/Fluid/IRC Cloud.app",
+        label    => "IRC Cloud",
         position => 4,
         action   => "add",
+        require  => Class['fluid'],
     }
     
-    dockutil::item { 'Textual':
+    dockutil::item { 'IRC Cloud':
         item     => "/Applications/Textual.app",
         label    => "Textual",
         position => 5,

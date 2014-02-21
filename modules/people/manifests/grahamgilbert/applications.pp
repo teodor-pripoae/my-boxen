@@ -10,7 +10,7 @@ class people::grahamgilbert::applications {
     include autodmg
 	include dropbox
 	include iterm2::dev
-	# include chocolat
+	include fluid
     include googledrive
     include google_notifier
 	include crashplan
