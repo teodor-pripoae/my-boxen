@@ -27,13 +27,16 @@ class people::grahamgilbert::applications {
     include sequel_pro
     include steam
     include vlc
-    include teamviewer
+    include vagrant
 
 	package{ 'zsh': }
 	package{ 'htop-osx': }
 	package{ 'tree': }
     package{ 'graphviz': }
-	include vagrant
+    package{ 'ext4fuse':
+        require => Class['osxfuse'],
+        ensure  => latest,
+    }
         
     # homebrew::tap { 'homebrew/binary': }
     
