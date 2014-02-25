@@ -19,6 +19,7 @@ class people::grahamgilbert::applications {
 	include caffeine
 	include alfred
     include firefox
+    include osxfuse
 	include xquartz
 	include vmware_fusion
 	include textmate::textmate2::release
@@ -148,5 +149,11 @@ class people::grahamgilbert::applications {
     package { 'Google Voice and Video':
         provider => 'pkgdmg',
         source   => 'https://dl.google.com/googletalk/googletalkplugin/GoogleVoiceAndVideoSetup.dmg',
+    }
+    
+    package { 'sshfs':
+        provider => 'pkgdmg',
+        source   => 'https://github.com/osxfuse/sshfs/releases/download/osxfuse-sshfs-2.5.0/sshfs-2.5.0.pkg',
+        require  => Class['osxfuse'],
     }
 }

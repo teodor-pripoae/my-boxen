@@ -39,38 +39,45 @@ class people::grahamgilbert::dock (
     }
 
     dockutil::item { 'Tweetbot':
+        item     => "/Applications/Tweetbot.app",
+        label    => "Tweetbot",
+        position => 4,
+        action   => "add",
+    }
+    
+    dockutil::item { 'IRC Cloud':
         item     => "/Users/${::luser}/Dropbox/Config/Fluid/IRC Cloud.app",
         label    => "IRC Cloud",
-        position => 4,
+        position => 5,
         action   => "add",
         require  => Class['fluid'],
     }
     
-    dockutil::item { 'IRC Cloud':
-        item     => "/Applications/Textual.app",
-        label    => "Textual",
-        position => 5,
+    dockutil::item { 'Slack':
+        item     => "/Applications/Slack.app",
+        label    => "Slack",
+        position => 6,
         action   => "add",
     }
 	
     dockutil::item { 'VMWare':
         item     => "/Applications/VMware Fusion.app",
         label    => "VMware Fusion",
-        position => 6,
+        position => 7,
         action   => "add",
     }
         
     dockutil::item { 'Gitbox':
         item     => "/Applications/Gitbox.app",
         label    => "Gitbox",
-        position => 7,
+        position => 8,
         action   => "add",
     }
     
     dockutil::item { 'GitHub':
         item     => "/Applications/GitHub.app",
         label    => "GitHub",
-        position => 8,
+        position => 9,
         action   => "add",
         require  => Package['Github for Mac'],
     }
