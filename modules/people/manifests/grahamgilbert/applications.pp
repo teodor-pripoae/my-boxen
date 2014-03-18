@@ -44,6 +44,11 @@ class people::grahamgilbert::applications {
         ensure  => latest,
         require => Homebrew::Tap['homebrew/binary'],
     }
+    
+    package {'brew-pkg':
+        ensure  => latest,
+        require => Homebrew::Tap['timsutton/formulae'],
+    }
 	
 	vagrant::plugin { 'vagrant-vmware-fusion':
 	  license => "/Users/${::luser}/Dropbox/Config/Vagrant/fusion-6-license.lic",

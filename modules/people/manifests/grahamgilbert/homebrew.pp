@@ -5,5 +5,6 @@ class people::grahamgilbert::homebrew (
 	){
 	
 	homebrew::tap { 'homebrew/binary': }
+    homebrew::tap { 'timsutton/formulae' }
 	
 }
