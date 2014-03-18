@@ -4,7 +4,8 @@ class people::grahamgilbert::homebrew (
   	$my_username  = $people::grahamgilbert::params::my_username
 	){
 	
-	homebrew::tap { 'homebrew/binary': }
-    homebrew::tap { 'timsutton/formulae': }
+	homebrew::tap { 'homebrew/binary': } ->
+    homebrew::tap { 'timsutton/formulae': } ->
+    exec { 'brew update': }
 	
 }

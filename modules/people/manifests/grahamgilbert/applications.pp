@@ -37,17 +37,15 @@ class people::grahamgilbert::applications {
         require => Class['osxfuse'],
         ensure  => latest,
     }
-        
-    # homebrew::tap { 'homebrew/binary': }
     
     package {'packer':
         ensure  => latest,
-        require => Homebrew::Tap['homebrew/binary'],
+        require => Class['people::grahamgilbert::homebrew'],
     }
     
     package {'brew-pkg':
         ensure  => latest,
-        require => Homebrew::Tap['timsutton/formulae'],
+        require => Class['people::grahamgilbert::homebrew'],
     }
 	
 	vagrant::plugin { 'vagrant-vmware-fusion':
