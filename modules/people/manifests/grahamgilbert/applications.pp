@@ -157,7 +157,7 @@ class people::grahamgilbert::applications {
     package { 'MunkiAdmin':
         provider => 'appdmg',
         source   => 'https://github.com/hjuutilainen/munkiadmin/releases/download/v0.3.0/MunkiAdmin-0.3.0.dmg',
-        s}
+    }
     
     package { 'sshfs':
         provider => 'pkgdmg',
