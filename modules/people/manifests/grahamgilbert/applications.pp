@@ -146,13 +146,18 @@ class people::grahamgilbert::applications {
 	
 	package {'Adobe Flash':
 		provider => 'pkgdmg',
-		source   => 'http://fpdownload.macromedia.com/get/flashplayer/current/licensing/mac/install_flash_player_11_osx_pkg.dmg',
+		source   => 'http://fpdownload.macromedia.com/get/flashplayer/current/licensing/mac/install_flash_player_12_osx_pkg.dmg',
 	}
     
     package { 'Google Voice and Video':
         provider => 'pkgdmg',
         source   => 'https://dl.google.com/googletalk/googletalkplugin/GoogleVoiceAndVideoSetup.dmg',
     }
+    
+    package { 'MunkiAdmin':
+        provider => 'appdmg',
+        source   => 'https://github.com/hjuutilainen/munkiadmin/releases/download/v0.3.0/MunkiAdmin-0.3.0.dmg',
+        s}
     
     package { 'sshfs':
         provider => 'pkgdmg',
