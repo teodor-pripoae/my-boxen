@@ -51,8 +51,6 @@ class people::grahamgilbert::applications {
 	vagrant::plugin { 'vagrant-vmware-fusion':
 	  license => "/Users/${::luser}/Dropbox/Config/Vagrant/fusion-6-license.lic",
 	}
-	
-	vagrant::plugin { 'vagrant-hostmanager': }
 
 	package { 'Github for Mac':
     	source   => 'https://github-central.s3.amazonaws.com/mac%2FGitHub%20for%20Mac%20111.zip',
