@@ -167,4 +167,9 @@ class people::grahamgilbert::applications {
         source   => 'https://github.com/osxfuse/sshfs/releases/download/osxfuse-sshfs-2.5.0/sshfs-2.5.0.pkg',
         require  => Class['osxfuse'],
     }
+    
+    package {'namebench':
+        provider => 'appdmg',
+        source   => 'https://namebench.googlecode.com/files/namebench-1.3.1-Mac_OS_X.dmg',
+    }
 }
