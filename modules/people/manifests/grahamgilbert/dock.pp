@@ -30,19 +30,12 @@ class people::grahamgilbert::dock (
         require  => Class['iterm2::dev'],
     }
     
-    # dockutil::item { 'Textmate2':
-#         item     => "/Applications/Textmate.app",
-#         label    => "TextMate",
-#         position => 3,
-#         action   => "add",
-#         require  => Class['textmate::textmate2::release'],
-#     }
-    
-    dockutil::item { 'Atom':
-        item     => "/Applications/Atom.app",
-        label    => "Atom",
+    dockutil::item { 'Textmate2':
+        item     => "/Applications/Textmate.app",
+        label    => "TextMate",
         position => 3,
         action   => "add",
+        require  => Class['textmate::textmate2::release'],
     }
 
     dockutil::item { 'Tweetbot':
