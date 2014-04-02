@@ -12,10 +12,8 @@ class people::grahamgilbert::applications {
 	include iterm2::dev
 	include fluid
     include googledrive
-    include google_notifier
 	include crashplan
     include handbrake
-	include virtualbox
 	include caffeine
 	include alfred
     include firefox
