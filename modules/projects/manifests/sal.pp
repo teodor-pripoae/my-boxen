@@ -3,12 +3,8 @@ class projects::sal (
   	$my_sourcedir = $people::grahamgilbert::params::my_sourcedir,
   	$my_username  = $people::grahamgilbert::params::my_username
 	){
-	
-	
-	
 	boxen::project { 'sal':
 		dir		=>	"${my_sourcedir}/Mine/sal",
 		source	=>	'grahamgilbert/sal',
-		#ruby	=>	'1.9.3-p392',
 	}
 }

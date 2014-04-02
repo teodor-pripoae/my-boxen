@@ -9,7 +9,6 @@ class projects::autopkg (
 	boxen::project { 'autopkg':
 		dir		=>	"${my_sourcedir}/Others/autopkg",
 		source	=>	'autopkg/autopkg',
-		#ruby	=>	'1.9.3-p392',
 	}
     
     # config for AutoPkg

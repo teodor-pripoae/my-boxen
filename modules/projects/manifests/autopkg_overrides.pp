@@ -7,7 +7,6 @@ class projects::autopkg_overrides (
 	boxen::project { 'autopkg-overrides':
 		dir		=>	"${my_sourcedir}/Mine/autopkg-overrides",
 		source	=>	'grahamgilbert/autopkg-overrides',
-		#ruby	=>	'1.9.3-p392',
 	}
 
 }

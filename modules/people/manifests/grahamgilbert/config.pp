@@ -8,10 +8,6 @@ class people::grahamgilbert::config (
         include osx::universal_access::ctrl_mod_zoom
         include osx::finder::unhide_library
 		
-		# Set the default ruby
-		
-		class { 'ruby::global': version => '1.9.3' }
-		
 		osx_chsh { $::luser:
 			shell   => '/opt/boxen/homebrew/bin/zsh',
 			require => Package['zsh'],
