@@ -168,4 +168,9 @@ class people::grahamgilbert::applications {
         provider => 'appdmg',
         source   => 'https://namebench.googlecode.com/files/namebench-1.3.1-Mac_OS_X.dmg',
     }
+    
+    package {'Scapple':
+        provider => 'appdmg_eula',
+        source   => 'http://scrivener.s3.amazonaws.com/Scapple.dmg'
+    }
 }
