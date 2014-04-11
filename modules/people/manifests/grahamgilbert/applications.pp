@@ -21,6 +21,7 @@ class people::grahamgilbert::applications {
 	include xquartz
 	include vmware_fusion
 	include textmate::textmate2::release
+    include screenflow
     include textwrangler
     include sequel_pro
     include steam
