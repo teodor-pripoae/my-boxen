@@ -26,7 +26,6 @@ class people::grahamgilbert::applications {
     include sequel_pro
     include steam
     include vlc
-    include vagrant
 
 	package{ 'zsh': }
 	package{ 'htop-osx': }
@@ -35,6 +34,10 @@ class people::grahamgilbert::applications {
     package{ 'ext4fuse':
         require => Class['osxfuse'],
         ensure  => latest,
+    }
+    
+    class { 'vagrant':
+      version => '1.5.3'
     }
     
     package {'packer':
