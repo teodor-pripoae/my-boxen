@@ -104,11 +104,6 @@ class people::grahamgilbert::applications {
         }
     }
     
-    package { 'Kiwi':
-        source   => "http://s3.amazonaws.com/Kiwi/Kiwi_3.0.1_1125.zip",
-        provider => compressed_app,
-    }
-    
     package { 'unetbooin':
     	source	 => "http://unetbootin.sourceforge.net/unetbootin-mac-latest.zip",
     	provider => compressed_app,
@@ -139,11 +134,6 @@ class people::grahamgilbert::applications {
         source   => 'http://www.omnigroup.com/ftp/pub/software/MacOSX/10.6/OmniGraffle-5.4.4.dmg',
     }
 	
-	package {'Xmarks':
-		provider => 'pkgdmg',
-		source   => 'https://rodan.lastpass.com/dev/xmarks_for_safari_1.5.6.dmg'
-	}
-	
 	package {'Adobe Flash':
 		provider => 'pkgdmg',
 		source   => 'http://fpdownload.macromedia.com/get/flashplayer/current/licensing/mac/install_flash_player_12_osx_pkg.dmg',
@@ -173,5 +163,10 @@ class people::grahamgilbert::applications {
     package {'Scapple':
         provider => 'appdmg_eula',
         source   => 'http://scrivener.s3.amazonaws.com/Scapple.dmg'
+    }
+    
+    package {'Quicktime 7':
+        provider => 'pkgdmg',
+        source   => 'http://support.apple.com/downloads/DL923/en_US/QuickTimePlayer7.6.6_SnowLeopard.dmg',
     }
 }

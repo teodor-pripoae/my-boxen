@@ -229,6 +229,11 @@ GITHUBTARBALL
     stdlib (4.1.0)
 
 GITHUBTARBALL
+  remote: redguava/puppet-screenflow
+  specs:
+    screenflow (1.0.0)
+
+GITHUBTARBALL
   remote: ripienaar/puppet-module-data
   specs:
     module-data (0.0.3)
@@ -271,6 +276,7 @@ DEPENDENCIES
   pkgconfig (= 1.0.0)
   repository (= 2.3.0)
   ruby (= 7.2.4)
+  screenflow (= 1.0.0)
   sequel_pro (= 1.0.0)
   stdlib (= 4.1.0)
   steam (= 1.0.1)
