@@ -38,7 +38,6 @@ github "module-data", "0.0.3", :repo => "ripienaar/puppet-module-data"
 # Core modules for a basic development environment. You can replace
 # some/most of these if you want, but it's not recommended.
 
-github "onepassword", "1.1.0"
 github "dnsmasq",     "1.0.1"
 github "emacs", "1.1.0"
 github "foreman",     "1.2.0"
