@@ -92,3 +92,6 @@ github "emacs_for_mac", "1.1.0", :repo => "dieterdemeyer/puppet-emacs_for_mac"
 github "zsh", "1.0.0"
 github "ohmyzsh", "1.0.0", :repo => "samjsharpe/puppet-ohmyzsh"
 github 'mysql', '0.0.1', :repo => 'andreimaxim/puppet-mariadb'
+github 'skype', '1.0.8'
+# github 'utorrent', '1.1.1', :repo => 'nonsense/puppet-utorrent'
+github 'transmission', '1.1.0'

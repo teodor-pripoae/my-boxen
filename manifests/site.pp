@@ -80,6 +80,8 @@ node default {
   include mysql
   include zsh
   include ohmyzsh
+  include skype
+  include transmission
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
@@ -125,7 +127,7 @@ node default {
   }
 
   #Generate Github ssh key if not present
-  $ssh_rsa_key = "/Users/toni/.ssh/id_rsa.pub"
+  $ssh_rsa_key = "/Users/toni/.ssh/id_rsa"
   exec {'Generate SSH key for Github':
     command => "ssh-keygen -f ${ssh_rsa_key} -t rsa -N ''",
     unless  => "test -e #{ssh_rsa_key}"
