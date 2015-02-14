@@ -55,29 +55,21 @@ node default {
   # core modules, needed for most things
   #include dnsmasq
   include git
-  include hub
   include java
   include ruby
-  include phantomjs
   include osx::global::disable_key_press_and_hold
   include osx::global::disable_autocorrect
   include iterm2::stable
+  include docker
   include chrome
   include firefox
   include caffeine
   include appcleaner
-  include googledrive
   include dropbox
   include alfred
-  include teamviewer
-  include virtualbox
-  include vagrant
-  include textmate
   include emacs_for_mac
   include postgresapp
-  # include mongodb
   include redis
-  include mysql
   include zsh
   include ohmyzsh
   include skype
@@ -94,12 +86,11 @@ node default {
   include nodejs::v0_10
 
   # default ruby versions
-  ruby::version { '1.9.3': }
-  ruby::version { '2.0.0': }
-  # ruby::version { '2.1.0': }
-  ruby::version { '2.1.1': }
+  ruby::version { '2.1.2': }
+  ruby::version { '2.1.5': }
+  ruby::version { '2.2.0': }
 
-  ruby::version { 'jruby-1.7.9': }
+  ruby::version { 'jruby-1.7.11': }
 
   # common, useful packages
   package {
@@ -108,8 +99,9 @@ node default {
      'findutils',
      'gnu-tar',
      'the_silver_searcher',
-     'mongodb',
-     'memcached'
+     'memcached',
+     'cassandra',
+     'elasticsearch'
     ]:
   }
 
